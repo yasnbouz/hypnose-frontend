@@ -5,6 +5,7 @@ module.exports = {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
     testPathIgnorePatterns: ['<rootDir>[/\\\\](node_modules|.next)[/\\\\]'],
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
+    modulePathIgnorePatterns: ['./cypress'],
     transform: {
         '^.+\\.(ts|tsx)$': 'babel-jest',
     },

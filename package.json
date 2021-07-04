@@ -8,9 +8,11 @@
     "start": "next start",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
-    "lint:fix": "yarn lint --fix",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "test": "jest"
+    "test:jest": "jest",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --headless",
+    "test:cy": "start-server-and-test dev 3000 cy:run"
   },
   "husky": {
     "hooks": {
@@ -19,7 +21,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint:fix",
+      "yarn lint --fix",
       "yarn format"
     ]
   },
@@ -36,6 +38,7 @@
     "@types/react": "17.0.13",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "babel-jest": "^27.0.6",
+    "cypress": "^7.6.0",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
     "eslint-plugin-prettier": "^3.4.0",
@@ -43,6 +46,7 @@
     "jest": "^27.0.6",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.2",
+    "start-server-and-test": "^1.12.5",
     "typescript": "4.3.5"
   }
 }
