@@ -1,15 +1,4 @@
-import {
-    HStack,
-    Link,
-    IconButton,
-    UnorderedList,
-    ListItem,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    Button,
-} from '@chakra-ui/react';
+import { HStack, Link, IconButton, UnorderedList, ListItem, Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import CartIcon from '@/assets/header/cart.svg';
@@ -25,21 +14,11 @@ function Navigation(): JSX.Element {
         return false;
     };
     return (
-        <HStack
-            as="nav"
-            spacing="22px"
-            display={['none', 'none', 'none', 'flex']}
-        >
+        <HStack as="nav" spacing="22px" display={['none', 'none', 'none', 'flex']}>
             <HStack as={UnorderedList} listStyleType="none" spacing="32px">
                 <ListItem>
                     <NextLink href="/" passHref>
-                        <Link
-                            fontFamily="montserrat"
-                            fontSize="14px"
-                            lineHeight="18px"
-                            fontWeight={isActive('/') ? '700' : '500'}
-                            color={isActive('/') ? '#51003A' : '#000000'}
-                        >
+                        <Link fontFamily="montserrat" fontSize="14px" lineHeight="18px" fontWeight={isActive('/') ? '700' : '500'} color={isActive('/') ? '#51003A' : '#000000'}>
                             Accueil
                         </Link>
                     </NextLink>
@@ -51,9 +30,7 @@ function Navigation(): JSX.Element {
                             fontSize="14px"
                             lineHeight="18px"
                             fontWeight={isActive('/boutique') ? '700' : '500'}
-                            color={
-                                isActive('/boutique') ? '#51003A' : '#000000'
-                            }
+                            color={isActive('/boutique') ? '#51003A' : '#000000'}
                         >
                             Boutique
                         </Link>
@@ -79,26 +56,12 @@ function Navigation(): JSX.Element {
                         </MenuButton>
                         <MenuList>
                             <NextLink href="/#propos" passHref>
-                                <MenuItem
-                                    fontFamily="montserrat"
-                                    fontSize="14px"
-                                    lineHeight="18px"
-                                    fontWeight="500"
-                                    _hover={{ bg: '#efdae885' }}
-                                    _focus={{ bg: '#efdae885' }}
-                                >
+                                <MenuItem fontFamily="montserrat" fontSize="14px" lineHeight="18px" fontWeight="500" _hover={{ bg: '#efdae885' }} _focus={{ bg: '#efdae885' }}>
                                     A Propos
                                 </MenuItem>
                             </NextLink>
                             <NextLink href="/#temoignages" passHref>
-                                <MenuItem
-                                    fontFamily="montserrat"
-                                    fontSize="14px"
-                                    lineHeight="18px"
-                                    fontWeight="500"
-                                    _hover={{ bg: '#efdae885' }}
-                                    _focus={{ bg: '#efdae885' }}
-                                >
+                                <MenuItem fontFamily="montserrat" fontSize="14px" lineHeight="18px" fontWeight="500" _hover={{ bg: '#efdae885' }} _focus={{ bg: '#efdae885' }}>
                                     Temoignages
                                 </MenuItem>
                             </NextLink>
@@ -146,16 +109,7 @@ function Navigation(): JSX.Element {
                 </ListItem>
                 <ListItem>
                     <NextLink href="/panier" passHref>
-                        <IconButton
-                            as={Link}
-                            aria-label="go your cart"
-                            width="42px"
-                            height="42px"
-                            bg="#EFDAE8"
-                            _hover={{ bg: '#EFDAE8' }}
-                            icon={<CartIcon />}
-                            isRound
-                        />
+                        <IconButton as={Link} aria-label="go your cart" width="42px" height="42px" bg="#EFDAE8" _hover={{ bg: '#EFDAE8' }} icon={<CartIcon />} isRound />
                     </NextLink>
                 </ListItem>
                 <ListItem>

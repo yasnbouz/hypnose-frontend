@@ -1,18 +1,4 @@
-import {
-    HStack,
-    IconButton,
-    VStack,
-    Link,
-    UnorderedList,
-    ListItem,
-    Flex,
-    Text,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuList,
-    Button,
-} from '@chakra-ui/react';
+import { HStack, IconButton, VStack, Link, UnorderedList, ListItem, Flex, Text, Menu, MenuButton, MenuItem, MenuList, Button } from '@chakra-ui/react';
 import { useState } from 'react';
 import NextLink from 'next/link';
 import CartIcon from '@/assets/header/cart.svg';
@@ -29,12 +15,7 @@ function MobileNavigation(): JSX.Element {
     };
     return (
         <>
-            <HStack
-                as={UnorderedList}
-                listStyleType="none"
-                display={['flex', 'flex', 'flex', 'none']}
-                w="79px"
-            >
+            <HStack as={UnorderedList} listStyleType="none" display={['flex', 'flex', 'flex', 'none']} w="79px">
                 <ListItem>
                     <NextLink href="/panier" passHref>
                         <IconButton
@@ -82,32 +63,17 @@ function MenuNav() {
             justifyContent="center"
             alignItems="center"
         >
-            <VStack
-                as={UnorderedList}
-                spacing="32px"
-                listStyleType="none"
-                maxW="233px"
-            >
+            <VStack as={UnorderedList} spacing="32px" listStyleType="none" maxW="233px">
                 <ListItem>
                     <NextLink href="/" passHref>
-                        <Link
-                            color="#000000"
-                            fontWeight="700"
-                            fontSize="18px"
-                            fontFamily="montserrat"
-                        >
+                        <Link color="#000000" fontWeight="700" fontSize="18px" fontFamily="montserrat">
                             Accueil
                         </Link>
                     </NextLink>
                 </ListItem>
                 <ListItem>
                     <NextLink href="/boutique" passHref>
-                        <Link
-                            color="#000000"
-                            fontFamily="montserrat"
-                            fontWeight="500"
-                            fontSize="18px"
-                        >
+                        <Link color="#000000" fontFamily="montserrat" fontWeight="500" fontSize="18px">
                             Boutique
                         </Link>
                     </NextLink>
@@ -131,24 +97,12 @@ function MenuNav() {
                         </MenuButton>
                         <MenuList>
                             <NextLink href="/#propos" passHref>
-                                <MenuItem
-                                    fontFamily="montserrat"
-                                    fontWeight="500"
-                                    fontSize="18px"
-                                    _hover={{ bg: '#efdae885' }}
-                                    _focus={{ bg: '#efdae885' }}
-                                >
+                                <MenuItem fontFamily="montserrat" fontWeight="500" fontSize="18px" _hover={{ bg: '#efdae885' }} _focus={{ bg: '#efdae885' }}>
                                     A Propos
                                 </MenuItem>
                             </NextLink>
                             <NextLink href="/#temoignages" passHref>
-                                <MenuItem
-                                    fontFamily="montserrat"
-                                    fontWeight="500"
-                                    fontSize="18px"
-                                    _hover={{ bg: '#efdae885' }}
-                                    _focus={{ bg: '#efdae885' }}
-                                >
+                                <MenuItem fontFamily="montserrat" fontWeight="500" fontSize="18px" _hover={{ bg: '#efdae885' }} _focus={{ bg: '#efdae885' }}>
                                     Temoignages
                                 </MenuItem>
                             </NextLink>
@@ -157,35 +111,21 @@ function MenuNav() {
                 </ListItem>
                 <ListItem>
                     <NextLink href="/contact" passHref>
-                        <Link
-                            color="#000000"
-                            fontFamily="montserrat"
-                            fontWeight="500"
-                            fontSize="18px"
-                        >
+                        <Link color="#000000" fontFamily="montserrat" fontWeight="500" fontSize="18px">
                             Contact
                         </Link>
                     </NextLink>
                 </ListItem>
                 <ListItem>
                     <NextLink href="/compte" passHref>
-                        <Link
-                            color="#000000"
-                            fontFamily="montserrat"
-                            fontWeight="500"
-                            fontSize="18px"
-                        >
+                        <Link color="#000000" fontFamily="montserrat" fontWeight="500" fontSize="18px">
                             Mon Compte
                         </Link>
                     </NextLink>
                 </ListItem>
                 <ListItem>
                     <HStack>
-                        <Text
-                            fontFamily="montserrat"
-                            fontWeight="500"
-                            fontSize="18px"
-                        >
+                        <Text fontFamily="montserrat" fontWeight="500" fontSize="18px">
                             Langue:
                         </Text>
                         <IconButton
