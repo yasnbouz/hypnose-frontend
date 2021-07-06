@@ -3,21 +3,53 @@ import Anime from '@/assets/hero/anime.svg';
 import FrameLeft from '@/assets/hero/FrameLeft.svg';
 import FrameRight from '@/assets/hero/FrameRight.svg';
 import FrameTop from '@/assets/hero/FrameTop.svg';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Hero(): JSX.Element {
     return (
         <Flex as="section" h="560px" bg="#F7F1F6" pos="relative" px="20px" overflow="hidden">
-            <HStack maxWidth={1200} w="100%" margin="auto" justifyContent="space-between" alignItems="center">
-                <Box>
-                    <Text fontFamily="montserrat" fontWeight="500" fontSize="40px" lineHeight="56px" letterSpacing="0.2px" color="#000" maxW="645px">
-                        Il y a une vie avant,
-                        <br /> et une vie après l’Hypnose.
-                    </Text>
-                </Box>
-                <Box>
-                    <Anime />
-                </Box>
-            </HStack>
+            <Swiper slidesPerView={1}>
+                <SwiperSlide>
+                    <HStack maxWidth={1200} w="100%" margin="auto" justifyContent="space-between" alignItems="center">
+                        <Box>
+                            <Text fontFamily="montserrat" fontWeight="500" fontSize="40px" lineHeight="56px" letterSpacing="0.2px" color="#000" maxW="645px">
+                                Il y a une vie avant,
+                                <br /> et une vie après l’Hypnose.
+                            </Text>
+                        </Box>
+                        <Box>
+                            <Anime />
+                        </Box>
+                    </HStack>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <HStack maxWidth={1200} w="100%" margin="auto" justifyContent="space-between" alignItems="center">
+                        <Box>
+                            <Text fontFamily="montserrat" fontWeight="500" fontSize="40px" lineHeight="56px" letterSpacing="0.2px" color="#000" maxW="645px">
+                                Il y a une vie avant,
+                                <br /> et une vie après l’Hypnose.
+                            </Text>
+                        </Box>
+                        <Box>
+                            <Anime />
+                        </Box>
+                    </HStack>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <HStack maxWidth={1200} w="100%" margin="auto" justifyContent="space-between" alignItems="center">
+                        <Box>
+                            <Text fontFamily="montserrat" fontWeight="500" fontSize="40px" lineHeight="56px" letterSpacing="0.2px" color="#000" maxW="645px">
+                                Il y a une vie avant,
+                                <br /> et une vie après l’Hypnose.
+                            </Text>
+                        </Box>
+                        <Box>
+                            <Anime />
+                        </Box>
+                    </HStack>
+                </SwiperSlide>
+            </Swiper>
+
             <Box pos="absolute" w="275px" h="375px" left="-5px" top="215px" opacity="0.4" aria-hidden="true">
                 <FrameLeft />
             </Box>
