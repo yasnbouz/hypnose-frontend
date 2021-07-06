@@ -3,6 +3,7 @@ import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 const fonts = {
     montserrat: `'Montserrat', sans-serif`,
+    raleway: 'Raleway',
 };
 
 const breakpoints = createBreakpoints({

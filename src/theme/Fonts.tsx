@@ -25,6 +25,14 @@ export default function Fonts(): JSX.Element {
               font-display: optional;
               src: url(/assets/fonts/Montserrat/montserrat-700.woff2) format('woff2');
             }
+            // Raleway
+            @font-face {
+              font-family: 'Raleway';
+              font-style: normal;
+              font-weight:700;
+              font-display: optional;
+              src: url(/assets/fonts/Raleway/raleway-700.woff2) format('woff2');
+            }
 `}
         />
     );
