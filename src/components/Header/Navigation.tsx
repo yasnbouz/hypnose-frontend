@@ -3,10 +3,18 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import CartIcon from '@/assets/header/cart.svg';
 import UKIcon from '@/assets/header/uk.svg';
+import FRIcon from '@/assets/header/fr.svg';
 import { useRouter } from 'next/router';
 
 function Navigation(): JSX.Element {
     const router = useRouter();
+    const isFrench = () => {
+        if (router.locale === 'fr') {
+            return true;
+        } else if (router.locale === 'en') {
+            return false;
+        }
+    };
     const isActive = (href: string) => {
         if (router.pathname === href) {
             return true;
@@ -113,17 +121,20 @@ function Navigation(): JSX.Element {
                     </NextLink>
                 </ListItem>
                 <ListItem>
-                    <IconButton
-                        aria-label="select a language"
-                        width="35px"
-                        height="34px"
-                        icon={<UKIcon />}
-                        isRound
-                        variant="unstyled"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                    />
+                    <NextLink href={router.pathname} locale={isFrench() ? 'en' : 'fr'}>
+                        <IconButton
+                            as={Link}
+                            aria-label="select a language"
+                            width="35px"
+                            height="34px"
+                            icon={isFrench() ? <UKIcon /> : <FRIcon />}
+                            isRound
+                            variant="unstyled"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                        />
+                    </NextLink>
                 </ListItem>
             </HStack>
         </HStack>

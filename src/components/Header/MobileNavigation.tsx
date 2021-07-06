@@ -5,7 +5,9 @@ import CartIcon from '@/assets/header/cart.svg';
 import BurgerIcon from '@/assets/header/burger.svg';
 import CloseIcon from '@/assets/header/close.svg';
 import UKIcon from '@/assets/header/uk.svg';
+import FRIcon from '@/assets/header/fr.svg';
 import { ChevronDownIcon } from '@chakra-ui/icons';
+import { useRouter } from 'next/router';
 
 function MobileNavigation(): JSX.Element {
     const [open, setOpen] = useState(false);
@@ -50,6 +52,14 @@ function MobileNavigation(): JSX.Element {
     );
 }
 function MenuNav() {
+    const router = useRouter();
+    const isFrench = () => {
+        if (router.locale === 'fr') {
+            return true;
+        } else if (router.locale === 'en') {
+            return false;
+        }
+    };
     return (
         <Flex
             as="nav"
@@ -128,18 +138,21 @@ function MenuNav() {
                         <Text fontFamily="montserrat" fontWeight="500" fontSize="18px">
                             Langue:
                         </Text>
-                        <IconButton
-                            aria-label="select a language"
-                            width="35px"
-                            height="34px"
-                            icon={<UKIcon />}
-                            isRound
-                            variant="ghost"
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            border="2px solid #F0F0F0"
-                        />
+                        <NextLink href={router.pathname} locale={isFrench() ? 'en' : 'fr'}>
+                            <IconButton
+                                as={Link}
+                                aria-label="select a language"
+                                width="35px"
+                                height="34px"
+                                icon={isFrench() ? <UKIcon /> : <FRIcon />}
+                                isRound
+                                variant="ghost"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                border="2px solid #F0F0F0"
+                            />
+                        </NextLink>
                     </HStack>
                 </ListItem>
             </VStack>
