@@ -121,7 +121,7 @@ function Navigation(): JSX.Element {
                     </NextLink>
                 </ListItem>
                 <ListItem>
-                    <NextLink href={router.pathname} locale={isFrench() ? 'en' : 'fr'}>
+                    <NextLink href={router.asPath} locale={isFrench() ? 'en' : 'fr'}>
                         <IconButton
                             as={Link}
                             aria-label="select a language"

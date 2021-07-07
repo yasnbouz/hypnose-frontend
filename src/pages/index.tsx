@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Search from '@/components/Search';
 import Partenaires from '@/components/Partenaires';
+import PopularProducts from '@/components/PopularProducts';
 
 export default function Home(): JSX.Element {
     return (
@@ -11,6 +12,7 @@ export default function Home(): JSX.Element {
                 <Hero />
                 <Search />
                 <Partenaires />
+                <PopularProducts />
             </main>
         </div>
     );
