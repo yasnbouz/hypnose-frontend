@@ -6,10 +6,10 @@ import NextLink from 'next/link';
 
 export type ProductProps = {
     image: string;
-    category: 'Pack' | 'Séance MP3';
+    type: 'Pack' | 'Séance MP3';
     name: string;
     slug: string;
-    objectif: string;
+    category: string;
     oldPrice: string;
     price: string;
     avis: number;
@@ -18,7 +18,7 @@ function Product(props: ProductProps): JSX.Element {
     return (
         <VStack spacing="11px" p="15px" bg="white" w="348px" h="498.95px" borderRadius="10px" alignItems="stretch" boxShadow="-4px 4px 34px rgba(0, 0, 0, 0.1)">
             <Box pos="relative" cursor="pointer">
-                <NextLink key={props.slug} href={`/boutique/${encodeURIComponent(props.slug)}`} passHref>
+                <NextLink key={props.slug} href={`/boutique/${encodeURIComponent(props.category)}/${encodeURIComponent(props.slug)}`} passHref>
                     <Link _focus={{ outline: 'none' }}>
                         <Image src={props.image} width={318} height={268} objectFit="cover" alt={props.name} />
                     </Link>
@@ -39,7 +39,7 @@ function Product(props: ProductProps): JSX.Element {
                     textTransform="none"
                     color="#000000"
                 >
-                    {props.category}
+                    {props.type}
                 </Badge>
             </Box>
             <Tooltip label={props.name} placement="top">
@@ -51,8 +51,8 @@ function Product(props: ProductProps): JSX.Element {
             </Tooltip>
             <Flex justifyContent="space-between" flex="1">
                 <Box>
-                    <Text fontFamily="montserrat" fontWeight="600" fontSize="12px" lineHeight="22px" letterSpacing="0.3px" color="#AAAAAA">
-                        Objectif: {props.objectif}
+                    <Text fontFamily="montserrat" fontWeight="600" fontSize="12px" lineHeight="22px" letterSpacing="0.3px" color="#AAAAAA" textTransform="capitalize">
+                        Objectif: {props.category}
                     </Text>
                     <HStack spacing="6px">
                         <HStack spacing="3px">

@@ -3,7 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import theme from '@/theme';
 import Fonts from '@/theme/Fonts';
 // Import Swiper styles
-import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.min.css';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (

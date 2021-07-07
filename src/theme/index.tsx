@@ -4,6 +4,7 @@ import { createBreakpoints } from '@chakra-ui/theme-tools';
 const fonts = {
     montserrat: `'Montserrat', sans-serif`,
     raleway: 'Raleway',
+    mulish: 'Mulish',
 };
 
 const breakpoints = createBreakpoints({
@@ -20,6 +21,7 @@ const styles = {
                 textDecorationLine: 'none !important',
             },
         },
+        // '*': { outline: '1px solid red' },
     },
 };
 const theme = extendTheme({

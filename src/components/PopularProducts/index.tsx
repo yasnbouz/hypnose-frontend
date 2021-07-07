@@ -7,30 +7,30 @@ import NextLink from 'next/link';
 const data: ProductProps[] = [
     {
         image: '/assets/images/PopularProducts/Légèreté.png',
-        category: 'Pack',
+        type: 'Pack',
         name: 'Pack Légèreté : 3 séances + 1 ebook',
         slug: 'pack-legerete-3-seances-1-ebook',
-        objectif: 'Poids',
+        category: 'poids',
         oldPrice: '29,90€',
         price: '29,90€',
         avis: 10,
     },
     {
         image: '/assets/images/PopularProducts/ventre.png',
-        category: 'Séance MP3',
+        type: 'Séance MP3',
         name: 'Pour le ventre !',
         slug: 'pour-le-ventre',
-        objectif: 'Poids',
+        category: 'poids',
         oldPrice: '29,90€',
         price: '29,90€',
         avis: 10,
     },
     {
         image: '/assets/images/PopularProducts/reduction.png',
-        category: 'Séance MP3',
+        type: 'Séance MP3',
         name: 'Maigrir vite et bien avec la réduction virtuelle de l’estomac !',
         slug: 'maigrir-vite-et-bien-avec-la-reduction-virtuelle-de-lestomac',
-        objectif: 'Poids',
+        category: 'poids',
         oldPrice: '29,90€',
         price: '29,90€',
         avis: 10,
@@ -54,10 +54,10 @@ function PopularProducts(): JSX.Element {
                         <Product
                             key={product.slug}
                             image={product.image}
-                            category={product.category}
+                            type={product.type}
                             name={product.name}
                             slug={product.slug}
-                            objectif={product.objectif}
+                            category={product.category}
                             oldPrice={product.oldPrice}
                             price={product.price}
                             avis={product.avis}

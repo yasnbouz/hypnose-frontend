@@ -4,6 +4,7 @@ import Search from '@/components/Search';
 import Partenaires from '@/components/Partenaires';
 import PopularProducts from '@/components/PopularProducts';
 import Problématique from '@/components/Problématique';
+import Categories from '@/components/Categories';
 export default function Home(): JSX.Element {
     return (
         <div>
@@ -14,6 +15,7 @@ export default function Home(): JSX.Element {
                 <Partenaires />
                 <PopularProducts />
                 <Problématique />
+                <Categories />
             </main>
         </div>
     );

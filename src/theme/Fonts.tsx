@@ -47,6 +47,14 @@ export default function Fonts(): JSX.Element {
               font-display: optional;
               src: url(/assets/fonts/Raleway/raleway-700.woff2) format('woff2');
             }
+            // Mulish
+            @font-face {
+              font-family: 'Mulish';
+              font-style: normal;
+              font-weight:400;
+              font-display: optional;
+              src: url(/assets/fonts/Mulish/mulish-400.woff2) format('woff2');
+            }
 `}
         />
     );
