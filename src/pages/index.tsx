@@ -6,7 +6,7 @@ import PopularProducts from '@/components/PopularProducts';
 import Problématique from '@/components/Problématique';
 import Categories from '@/components/Categories';
 import Corrine from '@/components/MotDeCorrine';
-import ChiffreCle from '@/components/ChiffreClé';
+import ChiffreCle from '@/components/ChiffreCle';
 import Reseaux from '@/components/Reseaux';
 import ParlentsCorrine from '@/components/ParleDeCorrine';
 import Footer from '@/components/Footer';
