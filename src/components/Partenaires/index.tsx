@@ -7,7 +7,7 @@ import Frame5 from '@/assets/Partenaires/frame5.svg';
 function Partenaires(): JSX.Element {
     return (
         <Flex px="20px">
-            <HStack maxW="1200px" w="100%" mx="auto" spacing="139px">
+            <HStack maxW="1200px" w="100%" mx="auto" justifyContent="space-between" spacing="139px">
                 <Box>
                     <Frame1 />
                 </Box>
