@@ -4,6 +4,7 @@ export default function Fonts(): JSX.Element {
     return (
         <Global
             styles={`
+            // Montserrat
             @font-face {
               font-family: 'Montserrat';
               font-style: normal;
@@ -54,6 +55,15 @@ export default function Fonts(): JSX.Element {
               font-weight:400;
               font-display: optional;
               src: url(/assets/fonts/Mulish/mulish-400.woff2) format('woff2');
+            }
+            // Arial
+            @font-face {
+              font-family: 'Arial';
+              font-style: normal;
+              font-weight:400;
+              font-display: optional;
+              src: local('Arial'),
+              url(/assets/fonts/Arial/arial.woff2) format('woff2');
             }
 `}
         />

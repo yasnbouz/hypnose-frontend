@@ -5,6 +5,7 @@ const fonts = {
     montserrat: `'Montserrat', sans-serif`,
     raleway: 'Raleway',
     mulish: 'Mulish',
+    arial: 'Arial',
 };
 
 const breakpoints = createBreakpoints({
