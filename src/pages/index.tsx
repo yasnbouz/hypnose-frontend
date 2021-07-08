@@ -6,6 +6,7 @@ import PopularProducts from '@/components/PopularProducts';
 import Problématique from '@/components/Problématique';
 import Categories from '@/components/Categories';
 import Corrine from '@/components/MotDeCorrine';
+import ChiffreCle from '@/components/ChiffreClé';
 
 export default function Home(): JSX.Element {
     return (
@@ -19,6 +20,7 @@ export default function Home(): JSX.Element {
                 <Problématique />
                 <Categories />
                 <Corrine />
+                <ChiffreCle />
             </main>
         </div>
     );
