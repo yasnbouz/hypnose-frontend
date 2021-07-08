@@ -5,7 +5,7 @@ import YoutubeIcon from '@/assets/Reseaux/yt.svg';
 
 function Reseaux(): JSX.Element {
     return (
-        <Flex as="section" px="20px" bg="#F7F1F6" h="566px" pos="relative" zIndex="1" top="-100px">
+        <Flex as="section" px="20px" bg="#F7F1F6" h="566px" pos="relative" zIndex="1" mt="-100px">
             <Flex direction="column" spacing="0px" maxW="1200px" mx="auto" w="100%" justifyContent="center" alignItems="center" pt="140px">
                 <Heading fontFamily="montserrat" fontWeight="700" fontSize="32px" lineHeight="40px" color="#373F41" mb="9px">
                     Réseaux sociaux
