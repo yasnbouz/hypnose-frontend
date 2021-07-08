@@ -64,6 +64,7 @@ function MenuNav() {
         <Flex
             as="nav"
             position="absolute"
+            zIndex="99"
             bg="#EFDAE8"
             top="100%"
             left={0}
