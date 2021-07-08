@@ -8,6 +8,7 @@ import Categories from '@/components/Categories';
 import Corrine from '@/components/MotDeCorrine';
 import ChiffreCle from '@/components/ChiffreClé';
 import Reseaux from '@/components/Reseaux';
+import ParlentsCorrine from '@/components/ParleDeCorrine';
 
 export default function Home(): JSX.Element {
     return (
@@ -23,6 +24,7 @@ export default function Home(): JSX.Element {
                 <Corrine />
                 <ChiffreCle />
                 <Reseaux />
+                <ParlentsCorrine />
             </main>
         </div>
     );
