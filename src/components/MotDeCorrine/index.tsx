@@ -33,7 +33,7 @@ function Corrine(): JSX.Element {
                         Nadine, avril 2020
                     </Text>
 
-                    <NextLink href="/#temoignages">
+                    <NextLink href="/temoignages">
                         <Button
                             as={Link}
                             rightIcon={<ArrowRight />}

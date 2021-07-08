@@ -17,6 +17,23 @@ const breakpoints = createBreakpoints({
 });
 const styles = {
     global: {
+        '*::-webkit-scrollbar': {
+            width: '8px',
+        },
+        '*::-webkit-scrollbar-track': {
+            background: 'transparent',
+        },
+        '*::-webkit-scrollbar-thumb': {
+            backgroundColor: 'hsl(309deg 81% 88%)',
+            borderRadius: '20px',
+            '&:hover': {
+                backgroundColor: 'hsl(309deg 81% 78%)',
+            },
+        },
+        html: {
+            scrollbarWidth: 'thin',
+            scrollbarColor: 'hsl(309deg 81% 88%) transparent',
+        },
         a: {
             _hover: {
                 textDecorationLine: 'none !important',

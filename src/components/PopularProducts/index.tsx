@@ -6,7 +6,7 @@ import NextLink from 'next/link';
 
 const data: ProductProps[] = [
     {
-        image: '/assets/images/PopularProducts/Légèreté.png',
+        image: '/assets/images/PopularProducts/legerete.png',
         type: 'Pack',
         name: 'Pack Légèreté : 3 séances + 1 ebook',
         slug: 'pack-legerete-3-seances-1-ebook',

@@ -63,13 +63,29 @@ function Navigation(): JSX.Element {
                             Qui est Corrine Cloix ?
                         </MenuButton>
                         <MenuList>
-                            <NextLink href="/#propos" passHref>
-                                <MenuItem fontFamily="montserrat" fontSize="14px" lineHeight="18px" fontWeight="500" _hover={{ bg: '#efdae885' }} _focus={{ bg: '#efdae885' }}>
+                            <NextLink href="/a-propos" passHref>
+                                <MenuItem
+                                    as={Link}
+                                    fontFamily="montserrat"
+                                    fontSize="14px"
+                                    lineHeight="18px"
+                                    fontWeight="500"
+                                    _hover={{ bg: '#efdae885' }}
+                                    _focus={{ bg: '#efdae885' }}
+                                >
                                     A Propos
                                 </MenuItem>
                             </NextLink>
-                            <NextLink href="/#temoignages" passHref>
-                                <MenuItem fontFamily="montserrat" fontSize="14px" lineHeight="18px" fontWeight="500" _hover={{ bg: '#efdae885' }} _focus={{ bg: '#efdae885' }}>
+                            <NextLink href="/temoignages" passHref>
+                                <MenuItem
+                                    as={Link}
+                                    fontFamily="montserrat"
+                                    fontSize="14px"
+                                    lineHeight="18px"
+                                    fontWeight="500"
+                                    _hover={{ bg: '#efdae885' }}
+                                    _focus={{ bg: '#efdae885' }}
+                                >
                                     Temoignages
                                 </MenuItem>
                             </NextLink>
