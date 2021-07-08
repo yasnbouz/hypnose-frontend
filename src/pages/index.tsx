@@ -9,6 +9,7 @@ import Corrine from '@/components/MotDeCorrine';
 import ChiffreCle from '@/components/ChiffreClé';
 import Reseaux from '@/components/Reseaux';
 import ParlentsCorrine from '@/components/ParleDeCorrine';
+import Footer from '@/components/Footer';
 
 export default function Home(): JSX.Element {
     return (
@@ -26,6 +27,7 @@ export default function Home(): JSX.Element {
                 <Reseaux />
                 <ParlentsCorrine />
             </main>
+            <Footer />
         </div>
     );
 }
