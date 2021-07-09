@@ -1,16 +1,11 @@
 import Header from '@/components/Common/Header';
-import { Heading } from '@chakra-ui/react';
-
+import Hero from '@/components/BoutiquePage/Hero';
 function Boutique(): JSX.Element {
     return (
         <div>
             <Header />
             <main>
-                <section>
-                    <Heading as="h1" textAlign="center">
-                        Boutique
-                    </Heading>
-                </section>
+                <Hero />
             </main>
         </div>
     );
