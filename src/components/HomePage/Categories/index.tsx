@@ -1,9 +1,9 @@
 import { Flex, Box } from '@chakra-ui/react';
 import Category from './Category';
-import PoidsVector from '@/assets/Categories/poids.svg';
-import AmourVector from '@/assets/Categories/amour.svg';
-import BienVector from '@/assets/Categories/bien.svg';
-import ReuusiteVector from '@/assets/Categories/reussite.svg';
+import PoidsVector from '@/assets/HomePage/Categories/poids.svg';
+import AmourVector from '@/assets/HomePage/Categories/amour.svg';
+import BienVector from '@/assets/HomePage/Categories/bien.svg';
+import ReuusiteVector from '@/assets/HomePage/Categories/reussite.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, EffectFade, Autoplay } from 'swiper/core';
 SwiperCore.use([Navigation, EffectFade, Autoplay]);

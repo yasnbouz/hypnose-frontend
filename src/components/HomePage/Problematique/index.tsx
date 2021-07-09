@@ -1,10 +1,10 @@
 import { Box, HStack, Flex, Heading, Text, Link, VStack, List, ListItem, ListIcon, Button } from '@chakra-ui/react';
-import Frame from '@/assets/Problematique/frame.svg';
-import Ebook from '@/assets/Problematique/ebook.svg';
-import HeadPhone from '@/assets/Problematique/headphone.svg';
-import Greet from '@/assets/Problematique/hi.svg';
+import Frame from '@/assets/HomePage/Problematique/frame.svg';
+import Ebook from '@/assets/HomePage/Problematique/ebook.svg';
+import HeadPhone from '@/assets/HomePage/Problematique/headphone.svg';
+import Greet from '@/assets/HomePage/Problematique/hi.svg';
 import NextLink from 'next/link';
-import ArrowRightIcon from '@/assets/PopularProducts/arrowRight.svg';
+import ArrowRightIcon from '@/assets/HomePage/PopularProducts/arrowRight.svg';
 
 function Problems(): JSX.Element {
     return (

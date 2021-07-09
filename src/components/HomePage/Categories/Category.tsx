@@ -1,5 +1,5 @@
 import { VStack, Box, Heading, Text, Link, Button } from '@chakra-ui/react';
-import ArrowRightIcon from '@/assets/PopularProducts/arrowRight.svg';
+import ArrowRightIcon from '@/assets/HomePage/PopularProducts/arrowRight.svg';
 import NextLink from 'next/link';
 import { ReactNode } from 'react';
 

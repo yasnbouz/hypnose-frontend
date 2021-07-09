@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Flex, Button, HStack, VStack, Tooltip, Badge, Link } from '@chakra-ui/react';
 import Image from 'next/image';
-import CartIcon from '@/assets/header/cart.svg';
+import CartIcon from '@/assets/HomePage/header/cart.svg';
 import { StarIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 

@@ -1,11 +1,11 @@
 import { HStack, IconButton, VStack, Link, UnorderedList, ListItem, Flex, Text, Menu, MenuButton, MenuItem, MenuList, Button } from '@chakra-ui/react';
 import { useState } from 'react';
 import NextLink from 'next/link';
-import CartIcon from '@/assets/header/cart.svg';
-import BurgerIcon from '@/assets/header/burger.svg';
-import CloseIcon from '@/assets/header/close.svg';
-import UKIcon from '@/assets/header/uk.svg';
-import FRIcon from '@/assets/header/fr.svg';
+import CartIcon from '@/assets/HomePage/header/cart.svg';
+import BurgerIcon from '@/assets/HomePage/header/burger.svg';
+import CloseIcon from '@/assets/HomePage/header/close.svg';
+import UKIcon from '@/assets/HomePage/header/uk.svg';
+import FRIcon from '@/assets/HomePage/header/fr.svg';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
 

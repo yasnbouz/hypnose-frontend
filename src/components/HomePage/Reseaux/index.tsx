@@ -1,7 +1,7 @@
 import { Flex, HStack, Heading, Text, Button, Link } from '@chakra-ui/react';
-import FacebookIcon from '@/assets/Reseaux/fb.svg';
-import InstagramIcon from '@/assets/Reseaux/ig.svg';
-import YoutubeIcon from '@/assets/Reseaux/yt.svg';
+import FacebookIcon from '@/assets/HomePage/Reseaux/fb.svg';
+import InstagramIcon from '@/assets/HomePage/Reseaux/ig.svg';
+import YoutubeIcon from '@/assets/HomePage/Reseaux/yt.svg';
 
 function Reseaux(): JSX.Element {
     return (

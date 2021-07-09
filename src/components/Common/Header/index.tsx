@@ -2,7 +2,7 @@ import { Flex, Box, HStack } from '@chakra-ui/react';
 import Navigation from './Navigation';
 import MobileNavigation from './MobileNavigation';
 import NextLink from 'next/link';
-import Logo from '../../../public/logo.svg';
+import Logo from '/public/logo.svg';
 
 function Header(): JSX.Element {
     return (

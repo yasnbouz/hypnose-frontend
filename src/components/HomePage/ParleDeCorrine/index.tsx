@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button, Link, Box, HStack, Text, Heading } from '@chakra-ui/react';
-import Group from '@/assets/ParleDeCorrine/Group.svg';
+import Group from '@/assets/HomePage/ParleDeCorrine/Group.svg';
 import NextLink from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, EffectFade, Autoplay } from 'swiper/core';

@@ -1,6 +1,6 @@
 import { VStack, Text, Link, Grid } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import Logo from '@/assets/Footer/whiteLogo.svg';
+import Logo from '@/assets/HomePage/Footer/whiteLogo.svg';
 function Footer(): JSX.Element {
     return (
         <VStack as="footer" px="20px" bg="#51003A" pt="69px" pb="32px">

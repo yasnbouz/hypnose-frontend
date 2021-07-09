@@ -1,8 +1,8 @@
 import { Box, Flex, Text, HStack } from '@chakra-ui/react';
-import Anime from '@/assets/hero/anime.svg';
-import FrameLeft from '@/assets/hero/FrameLeft.svg';
-import FrameRight from '@/assets/hero/FrameRight.svg';
-import FrameTop from '@/assets/hero/FrameTop.svg';
+import Anime from '@/assets/HomePage/hero/anime.svg';
+import FrameLeft from '@/assets/HomePage/hero/FrameLeft.svg';
+import FrameRight from '@/assets/HomePage/hero/FrameRight.svg';
+import FrameTop from '@/assets/HomePage/hero/FrameTop.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Hero(): JSX.Element {

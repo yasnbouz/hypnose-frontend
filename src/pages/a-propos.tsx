@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/Common/Header';
 import { Heading } from '@chakra-ui/react';
 function APropos(): JSX.Element {
     return (

@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, HStack, Text, VStack, Link, Button } from '@chakra-ui/react';
-import ArrowRightIcon from '@/assets/PopularProducts/arrowRight.svg';
+import ArrowRightIcon from '@/assets/HomePage/PopularProducts/arrowRight.svg';
 
 import Product, { ProductProps } from './Product';
 import NextLink from 'next/link';

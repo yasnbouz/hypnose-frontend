@@ -1,7 +1,7 @@
 import { Flex, HStack, VStack, Text } from '@chakra-ui/react';
-import Advice from '@/assets/ChiffreCle/advice.svg';
-import Loyalty from '@/assets/ChiffreCle/loyalty.svg';
-import Value from '@/assets/ChiffreCle/value.svg';
+import Advice from '@/assets/HomePage/ChiffreCle/advice.svg';
+import Loyalty from '@/assets/HomePage/ChiffreCle/loyalty.svg';
+import Value from '@/assets/HomePage/ChiffreCle/value.svg';
 function ChiffreCle(): JSX.Element {
     return (
         <Flex as="section" px="20px" mt="73px">

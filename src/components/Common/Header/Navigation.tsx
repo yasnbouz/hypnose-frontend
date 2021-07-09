@@ -1,9 +1,9 @@
 import { HStack, Link, IconButton, UnorderedList, ListItem, Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
-import CartIcon from '@/assets/header/cart.svg';
-import UKIcon from '@/assets/header/uk.svg';
-import FRIcon from '@/assets/header/fr.svg';
+import CartIcon from '@/assets/HomePage/header/cart.svg';
+import UKIcon from '@/assets/HomePage/header/uk.svg';
+import FRIcon from '@/assets/HomePage/header/fr.svg';
 import { useRouter } from 'next/router';
 
 function Navigation(): JSX.Element {

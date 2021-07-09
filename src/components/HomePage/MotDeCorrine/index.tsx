@@ -1,8 +1,8 @@
 import { Flex, Box, HStack, Text, Button, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import Face from '@/assets/Corrine/Face.svg';
-import Quote from '@/assets/Corrine/quote.svg';
-import ArrowRight from '@/assets/PopularProducts/arrowRight.svg';
+import Face from '@/assets/HomePage/Corrine/Face.svg';
+import Quote from '@/assets/HomePage/Corrine/quote.svg';
+import ArrowRight from '@/assets/HomePage/PopularProducts/arrowRight.svg';
 
 function Corrine(): JSX.Element {
     return (
