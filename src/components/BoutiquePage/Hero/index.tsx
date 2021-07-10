@@ -1,5 +1,5 @@
 import { Box, Flex, Text, HStack } from '@chakra-ui/react';
-import Anime from '@/assets/BoutiquePage/Frame.svg';
+import Anime from '@/assets/BoutiquePage/Hero/Frame.svg';
 import FrameLeft from '@/assets/HomePage/hero/FrameLeft.svg';
 import FrameRight from '@/assets/HomePage/hero/FrameRight.svg';
 import FrameTop from '@/assets/HomePage/hero/FrameTop.svg';
