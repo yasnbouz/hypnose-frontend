@@ -1,0 +1,22 @@
+# Node docker image on which this would be run
+image: node:14.17.2
+
+stages:
+    - build
+
+cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+        - .yarn
+        - node_modules/
+
+# Job 1:
+build:
+    stage: build
+    script:
+        - yarn --frozen-lockfile
+        - yarn build
+    artifacts:
+        expire_in: 1 hour
+        paths:
+            - .next
