@@ -16,7 +16,7 @@ export type ProductProps = {
 };
 function Product(props: ProductProps): JSX.Element {
     return (
-        <VStack spacing="11px" p="15px" bg="white" w="348px" h="498.95px" borderRadius="10px" alignItems="stretch" boxShadow="-4px 4px 34px rgba(0, 0, 0, 0.1)">
+        <VStack spacing="11px" p="15px" bg="white" maxW="348px" borderRadius="10px" alignItems="stretch" boxShadow="-4px 4px 34px rgba(0, 0, 0, 0.1)">
             <Box pos="relative" cursor="pointer">
                 <NextLink key={props.slug} href={`/boutique/${encodeURIComponent(props.category)}/${encodeURIComponent(props.slug)}`} passHref>
                     <Link _focus={{ outline: 'none' }}>
@@ -29,7 +29,7 @@ function Product(props: ProductProps): JSX.Element {
                     right="18px"
                     fontFamily="montserrat"
                     fontWeight="700"
-                    fontSize="12px"
+                    fontSize={['11px', null, null, '12px']}
                     lineHeight="22px"
                     letterSpacing="0.3px"
                     px="11px"
@@ -43,7 +43,17 @@ function Product(props: ProductProps): JSX.Element {
                 </Badge>
             </Box>
             <Tooltip label={props.name} placement="top">
-                <Heading color="#000000" fontFamily="montserrat" fontWeight="600" fontSize="16px" lineHeight="22px" textAlign="left" noOfLines={2} cursor="pointer">
+                <Heading
+                    as="h3"
+                    color="#000000"
+                    fontFamily="montserrat"
+                    fontWeight="600"
+                    fontSize={['14px', null, null, '16px']}
+                    lineHeight={['17.07px', null, null, '22px']}
+                    textAlign="left"
+                    noOfLines={2}
+                    cursor="pointer"
+                >
                     <NextLink key={props.slug} href={`/boutique/${encodeURIComponent(props.slug)}`} passHref>
                         <Link>{props.name}</Link>
                     </NextLink>
@@ -85,7 +95,7 @@ function Product(props: ProductProps): JSX.Element {
                 _active={{ bg: '#EFDAE8' }}
                 fontFamily="montserrat"
                 fontWeight="700"
-                fontSize="14px"
+                fontSize={['12px', null, null, '14px']}
                 color="51003A"
                 lineHeight="18px"
                 letterSpacing="0.3"

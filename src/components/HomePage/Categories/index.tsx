@@ -10,19 +10,34 @@ SwiperCore.use([Navigation, EffectFade, Autoplay]);
 
 function Categories(): JSX.Element {
     return (
-        <Flex as="section" px="20px" my="119px">
+        <Flex as="section" px="20px" pt={['20px', null, null, '96px']}>
             <Box maxW="1200px" w="100%" mx="auto" pos="relative">
                 <Box
                     as={Swiper}
                     navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
                     freeMode={true}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
-                    slidesPerView={4}
-                    spaceBetween={27}
+                    slidesPerView={1}
+                    spaceBetween={20}
+                    slidesOffsetBefore={20}
                     pos="initial"
+                    breakpoints={{
+                        580: {
+                            slidesPerView: 2,
+                            spaceBetween: 27,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 27,
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                            spaceBetween: 27,
+                        },
+                    }}
                 >
-                    <Box className="swiper-button-next" right="-70px" color="#C3CBCD"></Box>
-                    <Box className="swiper-button-prev" left="-70px" color="#C3CBCD"></Box>
+                    <Box display={['none', null, null, 'block']} className="swiper-button-next" right="-70px" color="#C3CBCD"></Box>
+                    <Box display={['none', null, null, 'block']} className="swiper-button-prev" left="-70px" color="#C3CBCD"></Box>
                     <SwiperSlide>
                         <Category name="Poids" description="At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.">
                             <PoidsVector />

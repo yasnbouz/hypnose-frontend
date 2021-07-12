@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HStack, Text, VStack, Link, Button } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, VStack, Link, Button, SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
 import ArrowRightIcon from '@/assets/HomePage/PopularProducts/arrowRight.svg';
 
 import Product, { ProductProps } from './Product';
@@ -38,19 +38,28 @@ const data: ProductProps[] = [
 ];
 
 function PopularProducts(): JSX.Element {
+    const numberOfProducts = useBreakpointValue({ base: 1, md: 2, lg: data.length });
+
     return (
         <Flex as="section" px="20px">
             <Box maxW="1200px" w="100%" mx="auto">
-                <VStack spacing="9px" justifyContent="center" alignItems="center" w="100%" h="108px" mt="50px">
-                    <Heading color="#373F41" fontFamily="montserrat" fontWeight="700" fontSize="32px" lineHeight="40px" textAlign="center">
+                <VStack spacing="9px" justifyContent="center" alignItems="center" w="100%" h="108px" mb={['14px', null, null, '20px']}>
+                    <Heading
+                        color="#373F41"
+                        fontFamily="montserrat"
+                        fontWeight="700"
+                        fontSize={['22px', null, null, '32px']}
+                        lineHeight={['26.82px', null, null, '40px']}
+                        textAlign="center"
+                    >
                         Découvrez nos produits populaires
                     </Heading>
                     <Text fontFamily="montserrat" fontSize="16px" lineHeight="22px" letterSpacing="0.3px" textAlign="center" color="##737B7D">
                         Séances MP3, Livres, eBooks...
                     </Text>
                 </VStack>
-                <HStack spacing="33px" justifyContent="center">
-                    {data.map((product) => (
+                <SimpleGrid justifyItems={['center']} spacing={['20px', null, null, '20px']} columns={numberOfProducts}>
+                    {data.slice(0, numberOfProducts).map((product) => (
                         <Product
                             key={product.slug}
                             image={product.image}
@@ -63,7 +72,7 @@ function PopularProducts(): JSX.Element {
                             avis={product.avis}
                         />
                     ))}
-                </HStack>
+                </SimpleGrid>
                 <Flex w="292px" h="55.9px" justifyContent="center" alignItems="center" mx="auto" mt="50px">
                     <NextLink href="/boutique" passHref>
                         <Button

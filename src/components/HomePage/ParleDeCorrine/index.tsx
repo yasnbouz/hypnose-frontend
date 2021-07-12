@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Button, Link, Box, HStack, Text, Heading } from '@chakra-ui/react';
+import { Button, Link, Box, HStack, Text, Heading, Flex, SimpleGrid } from '@chakra-ui/react';
 import Group from '@/assets/HomePage/ParleDeCorrine/Group.svg';
 import NextLink from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -20,33 +20,37 @@ function ParlentsCorrine(): JSX.Element {
                     pos="initial"
                     speed={800}
                 >
-                    <Box className="swiper-button-next" right="-70px" color="#C3CBCD"></Box>
-                    <Box className="swiper-button-prev" left="-70px" color="#C3CBCD"></Box>
+                    <Box display={['none', null, null, 'block']} className="swiper-button-next" right="-70px" color="#C3CBCD"></Box>
+                    <Box display={['none', null, null, 'block']} className="swiper-button-prev" left="-70px" color="#C3CBCD"></Box>
                     <SwiperSlide>
-                        <Frame />
+                        <Card />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Frame />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Frame />
+                        <Card />
                     </SwiperSlide>
                 </Box>
             </Box>
         </Box>
     );
 }
-function Frame(): JSX.Element {
+function Card(): JSX.Element {
     return (
-        <HStack spacing="55px" alignItems="center">
+        <SimpleGrid gridTemplateRows={['auto 1fr']} gridTemplateColumns={['minmax(0,480px)', null, '1fr 1fr']} alignItems="center" spacingY="30px" spacingX="55px">
             <Box>
-                <Image src="/assets/images/ParleDeCorrine/franceinfo.png" width={580} height={512} alt="Corrine il parmle en franceinfo" />
+                <Image src="/assets/images/ParleDeCorrine/franceinfo.png" objectFit="cover" width={580} height={512} alt="Corrine il parmle en franceinfo" />
             </Box>
-            <Box maxW="445px">
+            <Box maxW="465px">
                 <Text fontFamily="montserrat" fontWeight="800" fontSize="14px" lineHeight="18px" letterSpacing="0.4px" color="#811D65" mb="12px">
                     Ils parlent de Corinne cloix
                 </Text>
-                <Heading fontFamily="montserrat" fontWeight="500" fontSize="28px" lineHeight="34.13px" letterSpacing="0.2px" mb="40px">
+                <Heading
+                    fontFamily="montserrat"
+                    fontWeight="500"
+                    fontSize={['22px', null, null, '28px']}
+                    lineHeight={['26.82px', null, null, '34.13px']}
+                    letterSpacing="0.2px"
+                    mb={['30px', null, null, '40px']}
+                >
                     Replay Radio : Prenez soin de vous. Allégez-vous en réfléchissant à vos émotions
                 </Heading>
                 <Text fontFamily="mulish" fontWeight="400" fontSize="16px" lineHeight="22px" letterSpacing="0.3px" color="#737B7D" mb="56px">
@@ -77,7 +81,7 @@ function Frame(): JSX.Element {
                     </Button>
                 </NextLink>
             </Box>
-        </HStack>
+        </SimpleGrid>
     );
 }
 export default ParlentsCorrine;
