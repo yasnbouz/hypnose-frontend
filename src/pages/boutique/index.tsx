@@ -1,6 +1,7 @@
 import Header from '@/components/Common/Header';
 import Hero from '@/components/BoutiquePage/Hero';
 import Search from '@/components/BoutiquePage/Search';
+import Packs from '@/components/BoutiquePage/Packs';
 
 function Boutique(): JSX.Element {
     return (
@@ -9,6 +10,7 @@ function Boutique(): JSX.Element {
             <main>
                 <Hero />
                 <Search />
+                <Packs />
             </main>
         </div>
     );
