@@ -40,6 +40,7 @@ function Search(): JSX.Element {
                     borderTopRightRadius="0px"
                     borderBottomRightRadius="0px"
                     onChange={handleInputSearch}
+                    flex="1"
                 />
                 {isLargerThan40em ? (
                     <Button
@@ -51,7 +52,7 @@ function Search(): JSX.Element {
                         leftIcon={<SearchIcon />}
                         iconSpacing="17px"
                         color="white"
-                        flex="1 0 224px"
+                        flex="0 0 224px"
                         h="100%"
                         borderRadius="9px"
                         bg="#811D65"
@@ -77,7 +78,7 @@ function Search(): JSX.Element {
                         bg="#811D65"
                         _hover={{ bg: '#811D65' }}
                         _active={{ bg: '#811D65' }}
-                        flex="1 0 57px"
+                        flex="0 0 57px"
                         h="100%"
                     />
                 )}
