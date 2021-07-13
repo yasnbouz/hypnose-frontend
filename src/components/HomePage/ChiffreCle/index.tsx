@@ -1,12 +1,12 @@
-import { Flex, HStack, VStack, Text } from '@chakra-ui/react';
+import { Flex, VStack, Text, SimpleGrid } from '@chakra-ui/react';
 import Advice from '@/assets/HomePage/ChiffreCle/advice.svg';
 import Loyalty from '@/assets/HomePage/ChiffreCle/loyalty.svg';
 import Value from '@/assets/HomePage/ChiffreCle/value.svg';
 function ChiffreCle(): JSX.Element {
     return (
         <Flex as="section" px="20px" mt="73px">
-            <HStack maxW="1200px" w="100%" mx="auto" spacing="31px" justifyContent="space-between" pos="relative" zIndex="2">
-                <VStack bg="white" justifyContent="center" alignItems="center" flex="1 0 344px" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
+            <SimpleGrid maxW="1200px" minChildWidth="300px" w="100%" mx="auto" spacingX="30px" spacingY="20px" pos="relative" zIndex="2">
+                <VStack bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
                     <Advice />
                     <Text fontFamily="montserrat" fontWeight="700" fontSize="35px" lineHeight="42.67px" color="#373F41">
                         +10 000
@@ -15,7 +15,7 @@ function ChiffreCle(): JSX.Element {
                         Personnes reçues
                     </Text>
                 </VStack>
-                <VStack bg="white" justifyContent="center" alignItems="center" flex="1 0 344px" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
+                <VStack bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
                     <Loyalty />
                     <Text fontFamily="montserrat" fontWeight="700" fontSize="35px" lineHeight="42.67px" color="#373F41">
                         100%
@@ -24,7 +24,7 @@ function ChiffreCle(): JSX.Element {
                         Clients satisfaits
                     </Text>
                 </VStack>
-                <VStack bg="white" justifyContent="center" alignItems="center" flex="1 0 344px" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
+                <VStack bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
                     <Value />
                     <Text fontFamily="montserrat" fontWeight="700" fontSize="35px" lineHeight="42.67px" color="#373F41">
                         7 années
@@ -33,7 +33,7 @@ function ChiffreCle(): JSX.Element {
                         d’expérience
                     </Text>
                 </VStack>
-            </HStack>
+            </SimpleGrid>
         </Flex>
     );
 }
