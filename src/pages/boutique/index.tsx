@@ -15,6 +15,7 @@ function Boutique(): JSX.Element {
                 <ProductByCategory name="poids" description="Perdre du poids" />
                 <ProductByCategory name="poids" description="Bien-être" />
                 <ProductByCategory name="poids" description="Réussite" />
+                <ProductByCategory name="poids" description="Amour" />
             </main>
         </div>
     );
