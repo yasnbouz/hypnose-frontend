@@ -2,6 +2,7 @@ import Header from '@/components/Common/Header';
 import Hero from '@/components/BoutiquePage/Hero';
 import Search from '@/components/BoutiquePage/Search';
 import Packs from '@/components/BoutiquePage/Packs';
+import ProductByCategory from '@/components/BoutiquePage/ProductsByCategory';
 
 function Boutique(): JSX.Element {
     return (
@@ -11,6 +12,7 @@ function Boutique(): JSX.Element {
                 <Hero />
                 <Search />
                 <Packs />
+                <ProductByCategory name="poids" description="Perdre du poids" />
             </main>
         </div>
     );
