@@ -42,7 +42,7 @@ const data: PackProps[] = [
 function Packs(): JSX.Element {
     return (
         <Flex as="section" px="20px" pt={['56px', null, null, '63px']}>
-            <Box maxW="1200px" w="100%" mx="auto">
+            <Box maxW="1100px" w="100%" mx="auto">
                 <Box mb={['29.73px', null, null, '36.79px']}>
                     <Heading
                         as="h2"

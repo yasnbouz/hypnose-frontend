@@ -7,7 +7,15 @@ import FrameTop from '@/assets/HomePage/hero/FrameTop.svg';
 function Hero(): JSX.Element {
     return (
         <Flex as="section" h="447px" bg="#F7F1F6" pos="relative" px="20px" overflow="hidden">
-            <SimpleGrid columns={[1, 1, 2]} justifyItems="center" alignItems="center" maxWidth="1200px" spacingY="27px" w="100%" margin="auto">
+            <SimpleGrid
+                gridTemplateColumns={['1fr', '1fr', '2fr 1fr']}
+                justifyItems={['center', null, null, 'start']}
+                alignItems="center"
+                maxWidth="1100px"
+                spacingY="27px"
+                w="100%"
+                margin="auto"
+            >
                 <Box>
                     <Text
                         as="h1"

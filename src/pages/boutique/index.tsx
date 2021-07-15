@@ -1,4 +1,5 @@
 import Header from '@/components/Common/Header';
+import Footer from '@/components/Common/Footer';
 import Hero from '@/components/BoutiquePage/Hero';
 import Search from '@/components/BoutiquePage/Search';
 import Packs from '@/components/BoutiquePage/Packs';
@@ -19,6 +20,7 @@ function Boutique(): JSX.Element {
                 <ProductByCategory name="poids" description="Réussite" />
                 <ProductByCategory name="poids" description="Amour" />
             </main>
+            <Footer />
         </div>
     );
 }
