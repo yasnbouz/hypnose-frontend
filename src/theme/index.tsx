@@ -39,6 +39,9 @@ const styles = {
                 textDecorationLine: 'none !important',
             },
         },
+        '.radii': {
+            borderRadius: '10px',
+        },
         // '*': { outline: '1px solid red' },
     },
 };
