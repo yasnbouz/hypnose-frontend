@@ -4,7 +4,7 @@ import Logo from '@/assets/HomePage/Footer/whiteLogo.svg';
 function Footer(): JSX.Element {
     return (
         <VStack as="footer" px="20px" bg="#51003A" pt="69px" pb="32px">
-            <Grid templateColumns={['repeat(1,1fr)', 'repeat(2,1fr)', 'repeat(4,1fr)']} gap="40px" maxW="1200px" mx="auto" w="100%">
+            <Grid templateColumns={['repeat(1,1fr)', 'repeat(2,1fr)', 'repeat(4,1fr)']} gap="40px" maxW="1100px" mx="auto" w="100%">
                 <VStack alignItems={['center', 'flex-start']} spacing="19px">
                     <Logo />
                     <Text maxW="184px" fontFamily="arial" fontWeight="400" fontSize="14px" lineHeight="20px" color="white">

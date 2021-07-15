@@ -13,7 +13,7 @@ function Search(): JSX.Element {
     };
 
     return (
-        <Box max="1200px" px="20px" mx="auto" w="100%" mt="-37px" pos="relative" zIndex="1">
+        <Box max="1100px" px="20px" mx="auto" w="100%" mt="-37px" pos="relative" zIndex="1">
             <HStack
                 as="form"
                 spacing="0px"
