@@ -7,13 +7,22 @@ import FrameTop from '@/assets/HomePage/hero/FrameTop.svg';
 function Hero(): JSX.Element {
     return (
         <Flex as="section" h="560px" bg="#F7F1F6" pos="relative" px="20px" py="50px" overflow="hidden">
-            <SimpleGrid columns={[1, 2, null, 2]} placeItems="center" maxWidth={1200} w="100%" margin="auto" justifyContent="space-between">
+            <SimpleGrid
+                zIndex="2"
+                gridTemplateColumns={['1fr', '1fr', '2fr 1fr']}
+                alignItems="center"
+                justifyItems={['center', null, 'start']}
+                maxWidth={'1100px'}
+                w="100%"
+                margin="auto"
+                justifyContent="space-between"
+            >
                 <Heading
                     as="h1"
                     fontFamily="montserrat"
                     fontWeight={['400', null, null, '500']}
-                    textAlign={['center', 'left', null, 'left']}
-                    fontSize={['24px', '32px', null, '40px']}
+                    textAlign={['center', null, 'left']}
+                    fontSize={['24px', null, '32px', '40px']}
                     lineHeight={['29.26px', '44px', null, '56px']}
                     letterSpacing="0.2px"
                     color="#000"
@@ -29,13 +38,24 @@ function Hero(): JSX.Element {
                 </Box>
             </SimpleGrid>
 
-            <Box display={['none', null, null, 'initial']} pos="absolute" w="275px" h="375px" left="-5px" top="215px" opacity="0.4" aria-hidden="true">
+            <Box zIndex="1" display={['none', null, null, 'initial']} pos="absolute" w="275px" h="375px" left="-5px" top="215px" opacity="0.4" aria-hidden="true">
                 <FrameLeft />
             </Box>
-            <Box display={['none', null, null, 'initial']} pos="absolute" w="256px" h="587px" right="8%" top="-27px" opacity="0.4" aria-hidden="true">
+            <Box zIndex="1" display={['none', null, null, 'initial']} pos="absolute" w="256px" h="587px" right="8%" top="-27px" opacity="0.4" aria-hidden="true">
                 <FrameRight />
             </Box>
-            <Box display={['none', null, null, 'initial']} pos="absolute" w="407px" h="316px" left="50%" transform="translateX(-50%)" top="-27px" opacity="0.4" aria-hidden="true">
+            <Box
+                zIndex="1"
+                display={['none', null, null, 'initial']}
+                pos="absolute"
+                w="407px"
+                h="316px"
+                left="50%"
+                transform="translateX(-50%)"
+                top="-27px"
+                opacity="0.4"
+                aria-hidden="true"
+            >
                 <FrameTop />
             </Box>
         </Flex>

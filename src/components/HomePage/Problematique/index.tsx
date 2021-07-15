@@ -9,7 +9,7 @@ import ArrowRightIcon from '@/assets/HomePage/PopularProducts/arrowRight.svg';
 function Problems(): JSX.Element {
     return (
         <Flex as="section" px="20px" pt="119px">
-            <Stack direction={['column', null, null, 'row-reverse']} spacing="26px" maxW="1200px" w="100%" mx="auto" alignItems="center" justifyContent="space-between">
+            <Stack direction={['column', null, null, 'row-reverse']} spacing="26px" maxW="1100px" w="100%" mx="auto" alignItems="center" justifyContent="space-between">
                 <Box minW={['309px', null, '400px']} w={['309px', '450px', null, '100%']} maxW={['603px', null, null, '603px']}>
                     <Frame />
                 </Box>
@@ -17,7 +17,7 @@ function Problems(): JSX.Element {
                     <Heading fontFamily="montserrat" fontWeight="700" fontSize={['22px', null, null, '32px']} lineHeight={['26.82px', null, null, '40px']} color="#373F41">
                         Résolvez vos problèmes et atteignez vos objectifs
                     </Heading>
-                    <Text fontFamily="mulish" fontWeight="400" fontSize={['14px', null, null, '16px']} lineHeight="22px" color="#737B7D">
+                    <Text fontFamily="montserrat" fontWeight="400" fontSize={['14px', null, null, '16px']} lineHeight="22px" color="#737B7D">
                         Je suis Corinne Cloix , Maître Praticienne en Hypnose et Écrivain, et je vous propose le meilleur de l’hypnose où et quand vous voulez.
                     </Text>
                     <List spacing={['26px', null, null, '33px']}>

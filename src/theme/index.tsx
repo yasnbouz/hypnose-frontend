@@ -3,9 +3,6 @@ import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 const fonts = {
     montserrat: `'Montserrat', sans-serif`,
-    raleway: 'Raleway',
-    mulish: 'Mulish',
-    arial: 'Arial',
 };
 
 const breakpoints = createBreakpoints({
@@ -21,7 +18,7 @@ const styles = {
             width: '8px',
         },
         '*::-webkit-scrollbar-track': {
-            background: 'transparent',
+            background: '#F7F1F6',
         },
         '*::-webkit-scrollbar-thumb': {
             backgroundColor: 'hsl(309deg 81% 88%)',
@@ -32,7 +29,7 @@ const styles = {
         },
         html: {
             scrollbarWidth: 'thin',
-            scrollbarColor: 'hsl(309deg 81% 88%) transparent',
+            scrollbarColor: 'hsl(309deg 81% 88%) #F7F1F6',
         },
         a: {
             _hover: {
@@ -42,7 +39,6 @@ const styles = {
         '.radii': {
             borderRadius: '10px',
         },
-        // '*': { outline: '1px solid red' },
     },
 };
 const theme = extendTheme({

@@ -5,10 +5,11 @@ import Search from '@/components/BoutiquePage/Search';
 import Packs from '@/components/BoutiquePage/Packs';
 import ProductByCategory from '@/components/BoutiquePage/ProductsByCategory';
 import Livres from '@/components/BoutiquePage/Livres';
+import { motion } from 'framer-motion';
 
 function Boutique(): JSX.Element {
     return (
-        <div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} exit={{ opacity: 0 }}>
             <Header />
             <main>
                 <Hero />
@@ -21,7 +22,7 @@ function Boutique(): JSX.Element {
                 <ProductByCategory name="poids" description="Amour" />
             </main>
             <Footer />
-        </div>
+        </motion.div>
     );
 }
 

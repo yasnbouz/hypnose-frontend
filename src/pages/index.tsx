@@ -10,10 +10,10 @@ import ChiffreCle from '@/components/HomePage/ChiffreCle';
 import Reseaux from '@/components/HomePage/Reseaux';
 import ParlentsCorrine from '@/components/HomePage/ParleDeCorrine';
 import Footer from '@/components/Common/Footer';
-
+import { motion } from 'framer-motion';
 export default function Home(): JSX.Element {
     return (
-        <div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} exit={{ opacity: 0 }}>
             <Header />
             <main>
                 <Hero />
@@ -28,6 +28,6 @@ export default function Home(): JSX.Element {
                 <ParlentsCorrine />
             </main>
             <Footer />
-        </div>
+        </motion.div>
     );
 }
