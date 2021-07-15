@@ -8,7 +8,7 @@ import Frame5 from '@/assets/HomePage/Partenaires/frame5.svg';
 function Partenaires(): JSX.Element {
     return (
         <Flex px="20px" py={['53px', null]} pt={['53px', null, null, '100px']}>
-            <Box maxW="1200px" w="100%" mx="auto">
+            <Box maxW="1100px" w="100%" mx="auto">
                 <HStack spacing="35px" wrap="wrap" alignItems="center" justifyContent={['center', null, 'space-between']}>
                     <Box>
                         <Frame1 />

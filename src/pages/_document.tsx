@@ -12,11 +12,8 @@ class MyDocument extends Document {
                 <Head>
                     <link rel="preload" href="/assets/fonts/Montserrat/montserrat-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
                     <link rel="preload" href="/assets/fonts/Montserrat/montserrat-500.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-                    <link rel="preload" href="/assets/fonts/Montserrat/montserrat-600.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
                     <link rel="preload" href="/assets/fonts/Montserrat/montserrat-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-                    <link rel="preload" href="/assets/fonts/Montserrat/montserrat-800.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-                    <link rel="preload" href="/assets/fonts/Raleway/raleway-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-                    <link rel="preload" href="/assets/fonts/Mulish/mulish-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+                    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
                 </Head>
                 <body>
                     <Main />

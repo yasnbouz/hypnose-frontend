@@ -7,9 +7,9 @@ import Image from 'next/image';
 function Corrine(): JSX.Element {
     return (
         <Flex as="section" px="20px" mt="65px">
-            <Stack direction={['column', null, 'row']} spacing="20px" maxW="1200px" mx="auto" w="100%" justifyContent="space-between" alignItems="center">
+            <Stack direction={['column', null, 'row']} spacing="20px" maxW="1100px" mx="auto" w="100%" justifyContent="space-between" alignItems="center">
                 <Box w={['305.34px', null, null, '437px']}>
-                    <Image src="/assets/images/Corrine/face.png" width={437} height={468} quality={100} alt="corrine cloix face" />
+                    <Image src="/assets/images/Corrine/face-2x.png" width={437} height={468} quality={100} alt="corrine cloix face" />
                 </Box>
                 <Flex direction="column" alignItems={['center', null, 'flex-start']}>
                     <Box display={['none', null, null, 'initial']}>

@@ -5,8 +5,8 @@ import Value from '@/assets/HomePage/ChiffreCle/value.svg';
 function ChiffreCle(): JSX.Element {
     return (
         <Flex as="section" px="20px" mt="73px">
-            <SimpleGrid maxW="1200px" minChildWidth="300px" w="100%" mx="auto" spacingX="30px" spacingY="20px" pos="relative" zIndex="2">
-                <VStack bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
+            <SimpleGrid maxW="1100px" gridTemplateColumns={['1fr', '1fr 1fr', 'repeat(3,1fr)']} w="100%" mx="auto" spacingX="30px" spacingY="20px" pos="relative" zIndex="2">
+                <VStack p="20px" bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
                     <Advice />
                     <Text fontFamily="montserrat" fontWeight="700" fontSize="35px" lineHeight="42.67px" color="#373F41">
                         +10 000
@@ -15,7 +15,7 @@ function ChiffreCle(): JSX.Element {
                         Personnes reçues
                     </Text>
                 </VStack>
-                <VStack bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
+                <VStack p="20px" bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
                     <Loyalty />
                     <Text fontFamily="montserrat" fontWeight="700" fontSize="35px" lineHeight="42.67px" color="#373F41">
                         100%
@@ -24,7 +24,7 @@ function ChiffreCle(): JSX.Element {
                         Clients satisfaits
                     </Text>
                 </VStack>
-                <VStack bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
+                <VStack p="20px" bg="white" justifyContent="center" alignItems="center" h="196px" borderRadius="10px" boxShadow="5px 4px 17px rgba(0, 0, 0, 0.08)">
                     <Value />
                     <Text fontFamily="montserrat" fontWeight="700" fontSize="35px" lineHeight="42.67px" color="#373F41">
                         7 années

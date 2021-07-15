@@ -6,7 +6,7 @@ import NextLink from 'next/link';
 
 const data: ProductProps[] = [
     {
-        image: '/assets/images/PopularProducts/legerete.png',
+        image: '/assets/images/PopularProducts/legerete-2x.png',
         type: 'Pack',
         name: 'Pack Légèreté : 3 séances + 1 ebook',
         slug: 'pack-legerete-3-seances-1-ebook',
@@ -16,7 +16,7 @@ const data: ProductProps[] = [
         avis: 10,
     },
     {
-        image: '/assets/images/PopularProducts/ventre.png',
+        image: '/assets/images/PopularProducts/ventre-2x.png',
         type: 'Séance MP3',
         name: 'Pour le ventre !',
         slug: 'pour-le-ventre',
@@ -26,7 +26,7 @@ const data: ProductProps[] = [
         avis: 10,
     },
     {
-        image: '/assets/images/PopularProducts/reduction.png',
+        image: '/assets/images/PopularProducts/reduction-2x.png',
         type: 'Séance MP3',
         name: 'Maigrir vite et bien avec la réduction virtuelle de l’estomac !',
         slug: 'maigrir-vite-et-bien-avec-la-reduction-virtuelle-de-lestomac',
@@ -42,7 +42,7 @@ function PopularProducts(): JSX.Element {
 
     return (
         <Flex as="section" px="20px">
-            <Box maxW="1200px" w="100%" mx="auto">
+            <Box maxW="1100px" w="100%" mx="auto">
                 <VStack spacing="9px" justifyContent="center" alignItems="center" w="100%" h="108px" mb={['14px', null, null, '20px']}>
                     <Heading
                         color="#373F41"

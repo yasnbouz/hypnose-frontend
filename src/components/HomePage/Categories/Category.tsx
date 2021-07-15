@@ -11,13 +11,13 @@ export type CategoryProps = {
 
 function Category({ children, ...props }: CategoryProps): JSX.Element {
     return (
-        <VStack as="article" spacing="20px" p="10px" w="275px" border="1px solid #E4E4E4" borderRadius="15px">
+        <VStack as="article" spacing="20px" p="10px" maxW="320px" border="1px solid #E4E4E4" borderRadius="15px">
             <Box>{children}</Box>
-            <VStack spacing="12px">
+            <VStack spacing="12px" maxW="255px">
                 <Heading as="h3" fontFamily="montserrat" fontWeight="700" fontSize="18px" lineHeight="24px" letterSpacing="0.1px" color="#000000">
                     {props.name}
                 </Heading>
-                <Text fontSize="14px" textAlign="center" fontFamily="mulish" fontWeight="400" lineHeight="20px" letterSpacing="0.2px" color="#000000">
+                <Text fontSize="14px" textAlign="center" fontFamily="montserrat" fontWeight="400" lineHeight="20px" letterSpacing="0.2px" color="#000000">
                     {props.description}
                 </Text>
                 <NextLink href={`/boutique/${encodeURIComponent(props.name)}`} passHref>

@@ -5,28 +5,27 @@ import AmourVector from '@/assets/HomePage/Categories/amour.svg';
 import BienVector from '@/assets/HomePage/Categories/bien.svg';
 import ReuusiteVector from '@/assets/HomePage/Categories/reussite.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, EffectFade, Autoplay } from 'swiper/core';
-SwiperCore.use([Navigation, EffectFade, Autoplay]);
+import SwiperCore, { Navigation, Autoplay } from 'swiper/core';
+SwiperCore.use([Navigation, Autoplay]);
 
 function Categories(): JSX.Element {
     return (
         <Flex as="section" px="20px" pt={['20px', null, null, '96px']}>
-            <Box maxW="1200px" w="100%" mx="auto" pos="relative">
+            <Box maxW="1100px" w="100%" mx="auto" pos="relative">
                 <Box
                     as={Swiper}
                     navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
                     freeMode={true}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
-                    slidesPerView={1}
+                    slidesPerView={'auto'}
                     spaceBetween={20}
-                    slidesOffsetBefore={20}
                     pos="initial"
                     breakpoints={{
                         580: {
                             slidesPerView: 2,
                             spaceBetween: 27,
                         },
-                        768: {
+                        898: {
                             slidesPerView: 3,
                             spaceBetween: 27,
                         },
@@ -36,8 +35,8 @@ function Categories(): JSX.Element {
                         },
                     }}
                 >
-                    <Box display={['none', null, null, 'block']} className="swiper-button-next" right="-70px" color="#C3CBCD"></Box>
-                    <Box display={['none', null, null, 'block']} className="swiper-button-prev" left="-70px" color="#C3CBCD"></Box>
+                    <Box display={['none', null, null, null, 'block']} className="swiper-button-next" color="#C3CBCD" pos="absolute" right="-60px"></Box>
+                    <Box display={['none', null, null, null, 'block']} className="swiper-button-prev" color="#C3CBCD" pos="absolute" left="-60px"></Box>
                     <SwiperSlide>
                         <Category name="Poids" description="At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.">
                             <PoidsVector />

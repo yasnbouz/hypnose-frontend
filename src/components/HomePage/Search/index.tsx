@@ -15,8 +15,8 @@ function Search(): JSX.Element {
             alignItems="center"
             spacingX="50px"
             spacingY="0px"
-            w={['306px', null, '714px']}
-            h={['103px', null, '118px']}
+            w={['306px', null, null, '714px']}
+            h={['103px', null, null, '118px']}
             mx="auto"
             bg="white"
             zIndex="2"
@@ -27,13 +27,13 @@ function Search(): JSX.Element {
             marginTop={['-51.5px', null, '-59px']}
             boxShadow="10px 9px 34px rgba(0, 0, 0, 0.05)"
         >
-            <Text fontFamily="raleway" fontWeight="700" fontSize={['14px', null, null, '18px']} letterSpacing="0.2px" w="66px">
+            <Text fontFamily="montserrat" fontWeight="700" fontSize={['14px', null, null, '18px']} letterSpacing="0.2px">
                 Je veux
             </Text>
             <Select
                 variant="flushed"
                 color="#811D65"
-                fontFamily="raleway"
+                fontFamily="montserrat"
                 fontWeight="700"
                 fontSize={['14px', null, null, '16px']}
                 letterSpacing="0.2px"
@@ -63,6 +63,7 @@ function Search(): JSX.Element {
                 fontSize="14px"
                 lineHeight="18px"
                 letterSpacing="0.3px"
+                borderRadius="9999px"
             >
                 Commencer
             </Button>
