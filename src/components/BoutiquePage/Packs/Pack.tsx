@@ -15,18 +15,7 @@ export type PackProps = {
 
 function Pack(props: PackProps): JSX.Element {
     return (
-        <Flex
-            as="article"
-            direction="column"
-            alignItems="center"
-            pt="40px"
-            pb="31px"
-            px="20px"
-            w="264px"
-            boxShadow="-4px 4px 34px rgba(0, 0, 0, 0.05)"
-            borderRadius="10px"
-            bg="white"
-        >
+        <Flex as="article" direction="column" alignItems="center" pt="40px" pb="31px" px="20px" boxShadow="-4px 4px 34px rgba(0, 0, 0, 0.05)" borderRadius="10px" bg="white">
             <Box mb="30px">{props.children}</Box>
             <Heading as="h3" fontFamily="montserrat" fontWeight="600" fontSize="16px" lineHeight="22px" textAlign="center" color="#000000" mb="5px">
                 {props.name}

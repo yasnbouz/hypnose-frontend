@@ -22,10 +22,10 @@ function Hero(): JSX.Element {
                     fontFamily="montserrat"
                     fontWeight={['400', null, null, '500']}
                     textAlign={['center', null, 'left']}
-                    fontSize={['24px', null, '32px', '40px']}
+                    fontSize={['24px', null, '32px', '36px']}
                     lineHeight={['29.26px', '44px', null, '56px']}
                     letterSpacing="0.2px"
-                    color="#000"
+                    color="#373F41"
                     maxW={['306px', null, null, '645px']}
                     mb={['14px', null, null, '0px']}
                 >

@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Text, Link, Button, VStack, Badge, Tooltip } from '@chakra-ui/react';
+import { Box, HStack, Heading, Text, Link, Button, VStack, Badge, Tooltip, AspectRatio } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import Image from 'next/image';
 import { StarIcon } from '@chakra-ui/icons';
@@ -16,11 +16,13 @@ export type ProductProps = {
 };
 function Product(props: ProductProps): JSX.Element {
     return (
-        <VStack spacing="11px" w={['328px', null, null, '270px']} alignItems="flex-start" borderRadius="4px" p="15px" boxShadow="-4px 4px 38px rgba(0, 0, 0, 0.1)">
-            <Box pos="relative" borderRadius="10px" overflow="hidden" cursor="pointer" w={['298px', null, null, '244px']} h={['170', null, null, '174px']}>
+        <VStack spacing="11px" maxW="270px" overflow="hidden" alignItems="flex-start" borderRadius="4px" p="15px" boxShadow="-4px 4px 38px rgba(0, 0, 0, 0.1)">
+            <Box pos="relative" borderRadius="10px" overflow="hidden" cursor="pointer" maxW="100%" w={['260px', null, null, '244px']} h={['170px', null, null, '174px']}>
                 <NextLink href={`/boutique/${encodeURIComponent(props.category)}/${encodeURIComponent(props.slug)}`} passHref>
                     <Link>
-                        <Image src={props.image} layout="fill" alt={props.name} />
+                        <AspectRatio ratio={4 / 3}>
+                            <Image src={props.image} objectFit="cover" layout="fill" alt={props.name} />
+                        </AspectRatio>
                     </Link>
                 </NextLink>
                 <Badge

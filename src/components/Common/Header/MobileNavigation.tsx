@@ -8,13 +8,14 @@ import {
     Flex,
     FlexProps,
     Text,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuList,
     Button,
     ListItemProps,
     Box,
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import NextLink from 'next/link';
@@ -143,7 +144,7 @@ function MenuNav({ isOpen }: { isOpen: boolean }) {
                         <Button
                             as={Link}
                             variant="link"
-                            leftIcon={isActive('/boutique') ? <TriangleDownIcon color="#000" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
+                            leftIcon={isActive('/boutique') ? <TriangleDownIcon color="#811D65" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
                             fontWeight={isActive('/boutique') ? '700' : '500'}
                             color={isActive('/boutique') ? '#51003A' : '#000000'}
                             fontFamily="montserrat"
@@ -154,56 +155,70 @@ function MenuNav({ isOpen }: { isOpen: boolean }) {
                     </NextLink>
                 </MotionListItem>
                 <MotionListItem variants={listItemVariant} outline="0" zIndex="2">
-                    <Menu>
-                        <MenuButton
-                            bg="#EFDAE8"
-                            as={Button}
-                            rightIcon={<TriangleDownIcon color="#000" boxSize="9px" />}
-                            padding="0"
-                            fontFamily="montserrat"
-                            fontWeight="500"
-                            fontSize="18px"
-                            _hover={{ bg: '#EFDAE8' }}
-                            _expanded={{ bg: '#EFDAE8' }}
-                            _active={{ bg: '#EFDAE8' }}
-                            _focus={{ boxShadow: 'outline' }}
-                        >
-                            Qui est Corrine Cloix ?
-                        </MenuButton>
-                        <MenuList>
-                            <NextLink href="/a-propos" passHref>
-                                <MenuItem
+                    <Accordion allowToggle borderColor="transparent">
+                        <AccordionItem textAlign="center">
+                            <h2>
+                                <AccordionButton
+                                    bg="#EFDAE8"
+                                    rightIcon={<TriangleDownIcon color="#000" boxSize="9px" />}
+                                    padding="0"
                                     fontFamily="montserrat"
-                                    fontWeight={isActive('/a-propos') ? '600' : '500'}
-                                    color={isActive('/a-propos') ? '#51003A' : '#000000'}
+                                    fontWeight="500"
                                     fontSize="18px"
-                                    _hover={{ bg: '#efdae885' }}
-                                    _focus={{ bg: '#efdae885' }}
+                                    _hover={{ bg: '#EFDAE8' }}
+                                    _expanded={{ bg: '#EFDAE8' }}
+                                    _active={{ bg: '#EFDAE8' }}
+                                    _focus={{ boxShadow: 'outline' }}
                                 >
-                                    A Propos
-                                </MenuItem>
-                            </NextLink>
-                            <NextLink href="/temoignages" passHref>
-                                <MenuItem
-                                    fontFamily="montserrat"
-                                    fontWeight={isActive('/temoignages') ? '600' : '500'}
-                                    color={isActive('/temoignages') ? '#51003A' : '#000000'}
-                                    fontSize="18px"
-                                    _hover={{ bg: '#efdae885' }}
-                                    _focus={{ bg: '#efdae885' }}
-                                >
-                                    Temoignages
-                                </MenuItem>
-                            </NextLink>
-                        </MenuList>
-                    </Menu>
+                                    <Box flex="1" textAlign="left">
+                                        Qui est Corrine Cloix ?
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel pt="32px">
+                                <NextLink href="/a-propos" passHref>
+                                    <Button
+                                        as={Link}
+                                        variant="link"
+                                        fontFamily="montserrat"
+                                        fontWeight={isActive('/a-propos') ? '600' : '500'}
+                                        color={isActive('/a-propos') ? '#51003A' : '#000000'}
+                                        leftIcon={isActive('/a-propos') ? <TriangleDownIcon color="#811D65" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
+                                        fontSize="18px"
+                                        _hover={{ bg: '#efdae885' }}
+                                        _focus={{ bg: '#efdae885' }}
+                                    >
+                                        A Propos
+                                    </Button>
+                                </NextLink>
+                            </AccordionPanel>
+                            <AccordionPanel pb="0">
+                                <NextLink href="/temoignages" passHref>
+                                    <Button
+                                        as={Link}
+                                        variant="link"
+                                        fontFamily="montserrat"
+                                        fontWeight={isActive('/temoignages') ? '600' : '500'}
+                                        leftIcon={isActive('/temoignages') ? <TriangleDownIcon color="#811D65" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
+                                        color={isActive('/temoignages') ? '#51003A' : '#000000'}
+                                        fontSize="18px"
+                                        _hover={{ bg: '#efdae885' }}
+                                        _focus={{ bg: '#efdae885' }}
+                                    >
+                                        Temoignages
+                                    </Button>
+                                </NextLink>
+                            </AccordionPanel>
+                        </AccordionItem>
+                    </Accordion>
                 </MotionListItem>
                 <MotionListItem variants={listItemVariant}>
                     <NextLink href="/contact" passHref>
                         <Button
                             as={Link}
                             variant="link"
-                            leftIcon={isActive('/contact') ? <TriangleDownIcon color="#000" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
+                            leftIcon={isActive('/contact') ? <TriangleDownIcon color="#811D65" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
                             fontFamily="montserrat"
                             fontWeight={isActive('/contact') ? '700' : '500'}
                             color={isActive('/contact') ? '#51003A' : '#000000'}
@@ -218,7 +233,7 @@ function MenuNav({ isOpen }: { isOpen: boolean }) {
                         <Button
                             as={Link}
                             variant="link"
-                            leftIcon={isActive('/compte') ? <TriangleDownIcon color="#000" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
+                            leftIcon={isActive('/compte') ? <TriangleDownIcon color="#811D65" boxSize="9px" transform="rotate(-90deg)" /> : undefined}
                             fontFamily="montserrat"
                             fontWeight={isActive('/compte') ? '700' : '500'}
                             color={isActive('/compte') ? '#51003A' : '#000000'}
@@ -245,6 +260,7 @@ function MenuNav({ isOpen }: { isOpen: boolean }) {
                                 display="flex"
                                 alignItems="center"
                                 justifyContent="center"
+                                _hover={{ border: 0 }}
                             />
                         </NextLink>
                     </HStack>
