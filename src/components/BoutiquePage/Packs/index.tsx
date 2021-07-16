@@ -41,9 +41,9 @@ const data: PackProps[] = [
 
 function Packs(): JSX.Element {
     return (
-        <Flex as="section" px="20px" pt={['56px', null, null, '63px']}>
+        <Flex as="section" px="20px" pt={['56px', null, null, '63px']} overflow="hidden">
             <Box maxW="1100px" w="100%" mx="auto">
-                <Box mb={['29.73px', null, null, '36.79px']}>
+                <Box mb={['29.73px', null, null, '10px']}>
                     <Heading
                         as="h2"
                         fontFamily="montserrat"
@@ -71,7 +71,8 @@ function Packs(): JSX.Element {
                 </Box>
                 <Box
                     as={Swiper}
-                    p="20px"
+                    p="30px 0"
+                    overflow="visible"
                     slidesPerView={1}
                     spaceBetween={20}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -79,15 +80,12 @@ function Packs(): JSX.Element {
                     breakpoints={{
                         580: {
                             slidesPerView: 2,
-                            spaceBetween: 27,
                         },
                         768: {
                             slidesPerView: 3,
-                            spaceBetween: 27,
                         },
                         1200: {
                             slidesPerView: 4,
-                            spaceBetween: 27,
                         },
                     }}
                 >

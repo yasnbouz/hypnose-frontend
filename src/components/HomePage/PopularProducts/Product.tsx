@@ -78,7 +78,7 @@ function Product(props: ProductProps): JSX.Element {
                     </HStack>
                 </Box>
                 <Box textAlign="right">
-                    <Text fontFamily="montserrat" fontWeight="600" fontSize="12px" lineHeight="22px" letterSpacing="0.3px" color="#AAAAAA">
+                    <Text fontFamily="montserrat" fontWeight="600" fontSize="12px" lineHeight="22px" letterSpacing="0.3px" textDecoration="line-through" color="#AAAAAA">
                         29,90€
                     </Text>
                     <Text fontFamily="montserrat" fontWeight="800" fontSize="16px" lineHeight="22px" letterSpacing="0.3px">

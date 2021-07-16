@@ -1,12 +1,36 @@
-import { Flex, Box, Heading, HStack, Text, VStack, Stack, Button, SimpleGrid, IconButton } from '@chakra-ui/react';
+import { Flex, Box, Heading, HStack, Text, VStack, Stack, Button, SimpleGrid, IconButton, BoxProps } from '@chakra-ui/react';
 import Image from 'next/image';
-import livre from '../../../../public/assets/images/Livres/img1.png';
+// import livre from '../../../../public/assets/images/Livres/img1.png';
 import { StarIcon } from '@chakra-ui/icons';
 import CartIcon from '@/assets/HomePage/header/cart.svg';
 import DownloadIcon from '@/assets/BoutiquePage/Livre/download.svg';
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 
+const livres = [
+    {
+        title: 'Révélation',
+        description:
+            'Il y a une vie avant, et une vie après avoir lu ce livre qui délivre tous les secrets pour être en paix, et ce qui fait le succès des séances de Corinne Cloix. Un livre profond, révélateur de qui nous sommes, qui fait du bien, qui rend conscient que tout est possible, qu’il y a de l’or dans nos mains, dans nos cœurs, et qu’on peut être en paix et heureux.',
+        image: '/assets/images/Livres/img1.png',
+    },
+    {
+        title: 'L’hypnose',
+        description:
+            'Allégez-vous ! Du poids dans le corps, du fardeau sur vos épaules, de ce cœur trop lourd, du poids de vos préoccupations.                   « Je sais bien que je ne dois pas faire cela mais c’est plus fort que moi, je ne peux pas m’en empêcher ». qui n’a pas déjà prononcé cette phrase alors qu’il voulait cesser un comportement, révélant ainsi un manque d’estime et de confiance en soi ?',
+        image: '/assets/images/Livres/hypnose.webp',
+    },
+];
 function Livres(): JSX.Element {
+    const [currentLivre, setCurrentLivre] = useState(0);
+    const [data] = useState(livres);
+    const handleNextLivre = () => {
+        setCurrentLivre((prev) => prev + 1);
+    };
+    const handlePrevLivre = () => {
+        setCurrentLivre((prev) => prev - 1);
+    };
+
     return (
         <Flex px="20px" bg={['#F7F1F6', null, null, 'none']} py={[null, null, null, '40px']} mb={['25px', null, null, null]} mt={['80px', null, null, '0px']}>
             <Box as="section" maxW="1100px" w="100%" mx="auto">
@@ -38,10 +62,10 @@ function Livres(): JSX.Element {
                         position={[null, null, null, 'absolute']}
                         right="57px"
                     >
-                        <Image src={livre} layout="fill" alt="livre" objectFit="cover" className="radii" />
+                        <Image src={data[currentLivre].image} layout="fill" alt="livre" objectFit="cover" className="radii" />
                         <IconButton
                             icon={<ChevronLeftIcon boxSize={8} color="#811D65" />}
-                            aria-label="go to next livre"
+                            aria-label="go to previous livre"
                             position="absolute"
                             transform="translateY(-50%)"
                             left="-23px"
@@ -51,10 +75,12 @@ function Livres(): JSX.Element {
                             bg="white"
                             _hover={{ bg: 'white' }}
                             _active={{ bg: '#F7F1F6' }}
+                            onClick={handlePrevLivre}
+                            disabled={currentLivre === 0}
                         ></IconButton>
                         <IconButton
                             icon={<ChevronRightIcon boxSize={8} color="#811D65" />}
-                            aria-label="return to previous livre"
+                            aria-label="return to next livre"
                             position="fixed"
                             transform="translateY(-50%)"
                             right="-23px"
@@ -64,12 +90,14 @@ function Livres(): JSX.Element {
                             bg="white"
                             _hover={{ bg: 'white' }}
                             _active={{ bg: '#F7F1F6' }}
+                            onClick={handleNextLivre}
+                            disabled={currentLivre === data.length - 1}
                         ></IconButton>
                     </Box>
                     <Box order={[2, null, 1]}>
                         <VStack alignItems={['center', null, 'flex-start']} spacing="2px" mb="26px">
                             <Heading as="h3" fontFamily="montserrat" fontWeight="600" fontSize="18px" lineHeight="18px" letterSpacing="0.3px" color="#000000">
-                                Révélation
+                                {data[currentLivre].title}
                             </Heading>
                             <HStack spacing="6px">
                                 <HStack spacing="3px">
@@ -93,11 +121,7 @@ function Livres(): JSX.Element {
                             maxW={['286px', null, null, '516px']}
                             mb={['60px', null, '40px']}
                         >
-                            Il y a une vie avant, et une vie après avoir lu ce livre qui délivre tous les secrets pour être en paix, et ce qui fait le succès des séances de Corinne
-                            Cloix.
-                            <br />
-                            <br /> Un livre profond, révélateur de qui nous sommes, qui fait du bien, qui rend conscient que tout est possible, qu’il y a de l’or dans nos mains,
-                            dans nos cœurs, et qu’on peut être en paix et heureux.
+                            {data[currentLivre].description}
                         </Text>
                         <Stack w="100%" direction={['column', null, null, 'row']} alignItems="center" spacing="16px">
                             <Button
