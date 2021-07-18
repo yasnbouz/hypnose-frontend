@@ -1,22 +1,38 @@
-# Node docker image on which this would be run
-image: node:14.17.2
+image: cypress/base:14.17.0
 
-stages:
-    - build
+variables:
+  YARN_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/yarn"
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
 
 cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-        - .yarn
-        - node_modules/
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules
+    - cache/yarn
+    - cache/Cypress
 
-# Job 1:
+
+stages:
+  - build
+  - test
+
 build:
-    stage: build
-    script:
-        - yarn --frozen-lockfile
-        - yarn build
-    artifacts:
-        expire_in: 1 hour
-        paths:
-            - .next
+  stage: build
+  script:
+    - yarn install
+    - yarn build
+    
+  artifacts:
+    paths:
+      - .next
+
+test:
+  stage: test
+  script:
+    - yarn test:cy
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
