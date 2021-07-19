@@ -26,6 +26,7 @@ function Search(): JSX.Element {
             >
                 <Input
                     placeholder="Cherchez des produits pour poids, bien-être...."
+                    _placeholder={{ fontWeight: [400, null, 700] }}
                     fontFamily="montserrat"
                     fontWeight={['400', null, null, '700']}
                     fontSize={['13px', null, null, '14px']}
