@@ -1,15 +1,18 @@
 import { Box, Button, HStack, Input, IconButton } from '@chakra-ui/react';
 import SearchIcon from '@/assets/BoutiquePage/Search/search.svg';
 import { FormEvent, useState } from 'react';
+import { useRouter } from 'next/router';
 
 function Search(): JSX.Element {
     const [search, setSearch] = useState('');
+    const router = useRouter();
     const handleInputSearch = (e: FormEvent<HTMLInputElement>): void => {
         setSearch(e.currentTarget.value);
     };
-    const handleSubmit = (e: FormEvent<HTMLFontElement | HTMLDivElement>): void => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement | HTMLDivElement>): void => {
         e.preventDefault();
-        console.log(search);
+        router.push({ pathname: '/boutique/resultat/', query: { objectif: search } });
+        setSearch('');
     };
 
     return (

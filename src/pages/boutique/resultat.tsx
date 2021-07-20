@@ -1,6 +1,8 @@
 import Header from '@/components/Common/Header';
 import Hero from '@/components/BoutiqueResultat/Hero';
 import Search from '@/components/BoutiquePage/Search';
+import ProductsContainer from '@/components/BoutiqueResultat/ProductsContainer';
+import Footer from '@/components/Common/Footer';
 function Resultat(): JSX.Element {
     return (
         <div>
@@ -8,7 +10,9 @@ function Resultat(): JSX.Element {
             <main>
                 <Hero />
                 <Search />
+                <ProductsContainer />
             </main>
+            <Footer />
         </div>
     );
 }
