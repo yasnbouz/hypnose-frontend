@@ -57,21 +57,45 @@ function Footer(): JSX.Element {
                             Réseaux sociaux
                         </Link>
                     </NextLink>
-                    <NextLink href="/#">
-                        <Link fontFamily="montserrat" fontWeight="400" fontSize="14px" lineHeight="20px" color="#fff">
-                            Facebook
-                        </Link>
-                    </NextLink>
-                    <NextLink href="/#">
-                        <Link fontFamily="montserrat" fontWeight="400" fontSize="14px" lineHeight="20px" color="#fff">
-                            Instagram
-                        </Link>
-                    </NextLink>
-                    <NextLink href="/#">
-                        <Link fontFamily="montserrat" fontWeight="400" fontSize="14px" lineHeight="20px" color="#fff">
-                            Youtube
-                        </Link>
-                    </NextLink>
+
+                    <Link
+                        href="https://www.facebook.com/cloixcorinne/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        fontFamily="montserrat"
+                        fontWeight="400"
+                        fontSize="14px"
+                        lineHeight="20px"
+                        color="#fff"
+                    >
+                        Facebook
+                    </Link>
+
+                    <Link
+                        href="https://www.instagram.com/corinnecloix/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        fontFamily="montserrat"
+                        fontWeight="400"
+                        fontSize="14px"
+                        lineHeight="20px"
+                        color="#fff"
+                    >
+                        Instagram
+                    </Link>
+
+                    <Link
+                        href="https://www.youtube.com/channel/UCUJjsN7IPUi_xIjo_UKdePQ/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        fontFamily="montserrat"
+                        fontWeight="400"
+                        fontSize="14px"
+                        lineHeight="20px"
+                        color="#fff"
+                    >
+                        Youtube
+                    </Link>
                 </VStack>
             </Grid>
             <Text as="p" fontFamily="montserrat" fontWeight="400" fontSize="14px" lineHeight="20px" color="#fff" textAlign="center" pt="105px">

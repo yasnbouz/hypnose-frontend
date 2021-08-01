@@ -160,7 +160,6 @@ function MenuNav({ isOpen }: { isOpen: boolean }) {
                             <h2>
                                 <AccordionButton
                                     bg="#EFDAE8"
-                                    rightIcon={<TriangleDownIcon color="#000" boxSize="9px" />}
                                     padding="0"
                                     fontFamily="montserrat"
                                     fontWeight="500"

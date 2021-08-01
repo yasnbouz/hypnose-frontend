@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Flex, Button, HStack, VStack, Tooltip, Badge, Link } from '@chakra-ui/react';
+import { Box, Heading, Text, Flex, Button, HStack, VStack, Tooltip, Badge, Link, AspectRatio } from '@chakra-ui/react';
 import Image from 'next/image';
 import CartIcon from '@/assets/HomePage/header/cart.svg';
 import { StarIcon } from '@chakra-ui/icons';
@@ -16,11 +16,13 @@ export type ProductProps = {
 };
 function Product(props: ProductProps): JSX.Element {
     return (
-        <VStack spacing="11px" p="15px" bg="white" maxW="348px" borderRadius="10px" alignItems="stretch" boxShadow="-4px 4px 34px rgba(0, 0, 0, 0.1)">
+        <VStack spacing="11px" p="15px" bg="white" borderRadius="10px" alignItems="stretch" boxShadow="-4px 4px 34px rgba(0, 0, 0, 0.1)">
             <Box pos="relative" cursor="pointer">
                 <NextLink key={props.slug} href={`/boutique/${encodeURIComponent(props.category)}/${encodeURIComponent(props.slug)}`} passHref>
-                    <Link _focus={{ outline: 'none' }}>
-                        <Image src={props.image} width={318} height={268} objectFit="cover" alt={props.name} />
+                    <Link>
+                        <AspectRatio ratio={4 / 3} borderRadius="10px" overflow="hidden">
+                            <Image src={props.image} objectFit="cover" layout="fill" alt={props.name} />
+                        </AspectRatio>
                     </Link>
                 </NextLink>
                 <Badge
@@ -91,12 +93,12 @@ function Product(props: ProductProps): JSX.Element {
                 leftIcon={<CartIcon />}
                 borderRadius="29px"
                 bg="#EFDAE8"
-                _hover={{ bg: '#EFDAE8' }}
-                _active={{ bg: '#EFDAE8' }}
+                color="#51003A"
+                _hover={{ bg: '#51003A', color: 'white' }}
+                _active={{ bg: '#51003A', color: 'white' }}
                 fontFamily="montserrat"
                 fontWeight="700"
                 fontSize={['12px', null, null, '14px']}
-                color="51003A"
                 lineHeight="18px"
                 letterSpacing="0.3"
                 h="54px"

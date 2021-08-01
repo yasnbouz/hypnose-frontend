@@ -1,4 +1,4 @@
-import { Flex, HStack, Heading, Text, Button, Link, SimpleGrid } from '@chakra-ui/react';
+import { Flex, Heading, Text, Button, Link, SimpleGrid } from '@chakra-ui/react';
 import FacebookIcon from '@/assets/HomePage/Reseaux/fb.svg';
 import InstagramIcon from '@/assets/HomePage/Reseaux/ig.svg';
 import YoutubeIcon from '@/assets/HomePage/Reseaux/yt.svg';
@@ -16,14 +16,16 @@ function Reseaux(): JSX.Element {
                 <SimpleGrid columns={[1, null, 3]} spacingY="20px" spacingX="40px">
                     <Button
                         as={Link}
-                        href="#"
+                        href="https://www.facebook.com/cloixcorinne/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                         leftIcon={<FacebookIcon />}
                         iconSpacing="6px"
                         p="0px"
                         pl="8px"
                         justifyContent="flex-start"
-                        _hover={{ bg: 'white' }}
-                        _active={{ bg: 'white' }}
+                        _hover={{ bg: 'white', boxShadow: 'lg' }}
+                        _active={{ bg: 'white', boxShadow: 'md' }}
                         w="221px"
                         h="74px"
                         borderRadius="56px"
@@ -41,14 +43,16 @@ function Reseaux(): JSX.Element {
 
                     <Button
                         as={Link}
-                        href="#"
+                        href="https://www.instagram.com/corinnecloix/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                         leftIcon={<InstagramIcon />}
                         iconSpacing="6px"
                         p="0px"
                         pl="8px"
                         justifyContent="flex-start"
-                        _hover={{ bg: 'white' }}
-                        _active={{ bg: 'white' }}
+                        _hover={{ bg: 'white', boxShadow: 'lg' }}
+                        _active={{ bg: 'white', boxShadow: 'md' }}
                         w="221px"
                         h="74px"
                         borderRadius="56px"
@@ -66,14 +70,16 @@ function Reseaux(): JSX.Element {
 
                     <Button
                         as={Link}
-                        href="#"
+                        href="https://www.youtube.com/channel/UCUJjsN7IPUi_xIjo_UKdePQ/"
+                        rel="noopener noreferrer"
+                        target="_blank"
                         leftIcon={<YoutubeIcon />}
                         iconSpacing="6px"
                         p="0px"
                         pl="8px"
                         justifyContent="flex-start"
-                        _hover={{ bg: 'white' }}
-                        _active={{ bg: 'white' }}
+                        _hover={{ bg: 'white', boxShadow: 'lg' }}
+                        _active={{ bg: 'white', boxShadow: 'md' }}
                         w="221px"
                         h="74px"
                         borderRadius="56px"

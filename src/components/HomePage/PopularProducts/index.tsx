@@ -58,7 +58,7 @@ function PopularProducts(): JSX.Element {
                         Séances MP3, Livres, eBooks...
                     </Text>
                 </VStack>
-                <SimpleGrid justifyItems={['center']} spacing={['20px', null, null, '20px']} columns={numberOfProducts}>
+                <SimpleGrid spacing="20px" gridTemplateColumns={['repeat(auto-fit,minmax(260px,1fr))']}>
                     {data.slice(0, numberOfProducts).map((product) => (
                         <Product
                             key={product.slug}
