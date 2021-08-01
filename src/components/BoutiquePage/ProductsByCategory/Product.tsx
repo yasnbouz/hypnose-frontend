@@ -20,7 +20,7 @@ function Product(props: ProductProps): JSX.Element {
             <Box pos="relative" cursor="pointer" w="100%">
                 <NextLink href={`/boutique/${encodeURIComponent(props.category)}/${encodeURIComponent(props.slug)}`} passHref>
                     <Link>
-                        <AspectRatio ratio={16 / 9} overflow="hidden" borderRadius="10px">
+                        <AspectRatio ratio={4 / 3} overflow="hidden" borderRadius="10px">
                             <Image src={props.image} objectFit="cover" layout="fill" alt={props.name} />
                         </AspectRatio>
                     </Link>
