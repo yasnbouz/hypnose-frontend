@@ -52,8 +52,8 @@ function Corrine(): JSX.Element {
                             w="238px"
                             h="54px"
                             bg="#811D65"
-                            _hover={{ bg: '#811D65' }}
-                            _active={{ bg: '#811D65' }}
+                            _hover={{ bg: '#51003A' }}
+                            _active={{ bg: '#51003A' }}
                             color="white"
                             fontFamily="montserrat"
                             fontWeight="700"

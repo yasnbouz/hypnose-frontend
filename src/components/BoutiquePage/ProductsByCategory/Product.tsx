@@ -16,11 +16,11 @@ export type ProductProps = {
 };
 function Product(props: ProductProps): JSX.Element {
     return (
-        <VStack spacing="11px" maxW="270px" overflow="hidden" alignItems="flex-start" borderRadius="4px" p="15px" boxShadow="-4px 4px 38px rgba(0, 0, 0, 0.1)">
-            <Box pos="relative" borderRadius="10px" overflow="hidden" cursor="pointer" maxW="100%" w={['260px', null, null, '244px']} h={['170px', null, null, '174px']}>
+        <VStack spacing="11px" overflow="hidden" bg="white" alignItems="flex-start" borderRadius="10px" p="15px" boxShadow="-4px 4px 38px rgba(0, 0, 0, 0.1)">
+            <Box pos="relative" cursor="pointer" w="100%">
                 <NextLink href={`/boutique/${encodeURIComponent(props.category)}/${encodeURIComponent(props.slug)}`} passHref>
                     <Link>
-                        <AspectRatio ratio={4 / 3}>
+                        <AspectRatio ratio={16 / 9} overflow="hidden" borderRadius="10px">
                             <Image src={props.image} objectFit="cover" layout="fill" alt={props.name} />
                         </AspectRatio>
                     </Link>
@@ -100,12 +100,12 @@ function Product(props: ProductProps): JSX.Element {
                 leftIcon={<CartIcon />}
                 borderRadius="29px"
                 bg="#EFDAE8"
-                _hover={{ bg: '#EFDAE8' }}
-                _active={{ bg: '#EFDAE8' }}
+                color="#51003A"
+                _hover={{ bg: '#51003A', color: 'white' }}
+                _active={{ bg: '#51003A', color: 'white' }}
                 fontFamily="montserrat"
                 fontWeight="700"
                 fontSize="14px"
-                color="#51003A"
                 lineHeight="18px"
                 letterSpacing="0.3"
                 h="54px"

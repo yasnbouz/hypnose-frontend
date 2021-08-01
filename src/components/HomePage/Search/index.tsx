@@ -15,7 +15,7 @@ function Search(): JSX.Element {
             alignItems="center"
             spacingX="50px"
             spacingY="0px"
-            w={['306px', null, null, '714px']}
+            w={['306px', null, '460px', '714px']}
             h={['103px', null, null, '118px']}
             mx="auto"
             bg="white"
@@ -56,8 +56,8 @@ function Search(): JSX.Element {
                 w="160px"
                 h="54px"
                 bg="#811D65"
-                _hover={{ bg: '#811D65' }}
-                _active={{ bg: '#811D65' }}
+                _hover={{ bg: '#51003A' }}
+                _active={{ bg: '#51003A' }}
                 color="white"
                 fontFamily="montserrat"
                 fontSize="14px"

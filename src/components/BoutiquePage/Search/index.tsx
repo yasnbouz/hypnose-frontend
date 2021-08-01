@@ -56,8 +56,8 @@ function Search(): JSX.Element {
                     h="100%"
                     borderRadius="9px"
                     bg="#811D65"
-                    _hover={{ bg: '#811D65' }}
-                    _active={{ bg: '#811D65' }}
+                    _hover={{ bg: '#51003A' }}
+                    _active={{ bg: '#51003A' }}
                     borderTopLeftRadius="0px"
                     borderBottomLeftRadius="0px"
                     borderTopRightRadius="9px"

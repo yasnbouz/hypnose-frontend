@@ -61,8 +61,9 @@ function Pack(props: PackProps): JSX.Element {
                     p="12px, 18px, 12px, 18px"
                     mt="18px"
                     bg="#EFDAE8"
-                    _hover={{ bg: '#EFDAE8' }}
-                    _active={{ bg: '#EFDAE8' }}
+                    color="#51003A"
+                    _hover={{ bg: '#51003A', color: 'white' }}
+                    _active={{ bg: '#51003A', color: 'white' }}
                     rightIcon={<ArrowRightIcon />}
                     iconSpacing="10px"
                     fontFamily="montserrat"
@@ -70,7 +71,6 @@ function Pack(props: PackProps): JSX.Element {
                     fontWeight="700"
                     lineHeight="18px"
                     letterSpacing="0.3px"
-                    color="#51003A"
                 >
                     En savoir plus
                 </Button>

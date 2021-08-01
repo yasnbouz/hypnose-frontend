@@ -50,7 +50,7 @@ type ProductsByCategoryProps = {
     description: string;
 };
 function ProductsByCategory(props: ProductsByCategoryProps): JSX.Element {
-    const numberOfProducts = useBreakpointValue({ base: 2, md: 3, xl: data.length });
+    const numberOfProducts = useBreakpointValue({ base: 2, sm: data.length });
     return (
         <Flex as="section" px="20px" py={['20px', null, null, '40px']}>
             <Box maxW="1100px" mx="auto" w="100%">
@@ -97,12 +97,7 @@ function ProductsByCategory(props: ProductsByCategoryProps): JSX.Element {
                     </NextLink>
                 </Flex>
 
-                <SimpleGrid
-                    spacing="20px"
-                    pt={['20px', null, null, '13px']}
-                    gridTemplateColumns={['1fr', 'repeat(auto-fit,minmax(260px,max-content))']}
-                    justifyItems={['center', null, 'start']}
-                >
+                <SimpleGrid pt={['20px', null, null, '13px']} spacing="20px" gridTemplateColumns={['repeat(auto-fit,minmax(260px,1fr))']}>
                     {data.slice(0, numberOfProducts).map((product) => (
                         <Product
                             key={product.slug}

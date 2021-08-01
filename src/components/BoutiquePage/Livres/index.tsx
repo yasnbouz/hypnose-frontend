@@ -1,6 +1,5 @@
-import { Flex, Box, Heading, HStack, Text, VStack, Stack, Button, SimpleGrid, IconButton, BoxProps } from '@chakra-ui/react';
+import { Flex, Box, Heading, HStack, Text, VStack, Stack, Button, SimpleGrid, IconButton } from '@chakra-ui/react';
 import Image from 'next/image';
-// import livre from '../../../../public/assets/images/Livres/img1.png';
 import { StarIcon } from '@chakra-ui/icons';
 import CartIcon from '@/assets/HomePage/header/cart.svg';
 import DownloadIcon from '@/assets/BoutiquePage/Livre/download.svg';
@@ -129,12 +128,12 @@ function Livres(): JSX.Element {
                                 iconSpacing="10px"
                                 borderRadius="29px"
                                 bg="#EFDAE8"
-                                _hover={{ bg: '#EFDAE8' }}
-                                _active={{ bg: '#EFDAE8' }}
+                                color="#51003A"
+                                _hover={{ bg: '#51003A', color: 'white' }}
+                                _active={{ bg: '#51003A', color: 'white' }}
                                 fontFamily="montserrat"
                                 fontWeight="700"
                                 fontSize="14px"
-                                color="#51003A"
                                 lineHeight="18px"
                                 letterSpacing="0.3"
                                 h="54px"
@@ -148,12 +147,12 @@ function Livres(): JSX.Element {
                                 iconSpacing="10px"
                                 borderRadius="29px"
                                 bg="#EFDAE8"
-                                _hover={{ bg: '#EFDAE8' }}
-                                _active={{ bg: '#EFDAE8' }}
+                                color="#51003A"
+                                _hover={{ bg: '#51003A', color: 'white' }}
+                                _active={{ bg: '#51003A', color: 'white' }}
                                 fontFamily="montserrat"
                                 fontWeight="700"
                                 fontSize="14px"
-                                color="#51003A"
                                 lineHeight="18px"
                                 letterSpacing="0.3"
                                 h="54px"
